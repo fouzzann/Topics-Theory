@@ -1,0 +1,175 @@
+Week 18 (API,TODO,WATHER apk)
+
+Pending's -
+
+Read - watch,
+Block builder - consumer,
+On,
+Consumer
+BlocProvider.value
+    
+
+
+                                                                                   Week(18)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                     
+API
+
+An API (Application Programming Interface) is a set of rules and tools that allows different software applications to communicate with each other. It's like a bridge that lets one program interact with another, even if they are built differently.
+
+For example, if you are using a weather app on your phone, that app might use an API to get the latest weather data from a weather service. The weather service provides the data through its API, and the app retrieves it to display to you.
+
+APIs define the methods and data formats that applications can use to request and exchange information.
+
+
+
+
+HTTP
+
+HTTP (Hypertext Transfer Protocol) is the way your web browser and websites communicate with each other.
+
+Think of it like a language they use to request and send data. When you type a website address (URL) and hit enter, your browser sends an HTTP request to the website's server asking for the page. The server replies with an HTTP response, sending the website's content back to your browser to display.
+
+So, HTTP is just the method that allows your browser and websites to "talk" and exchange information.
+
+
+HTTP methods 
+
+1.GET: Retrieve data from the server.
+
+2.POST: Send data to the server, often to create something new (e.g., submitting a form).
+
+3.PUT: Replace existing data on the server with new data.
+
+4.DELETE: Remove data from the server.
+
+5.PATCH: Partially update existing data.
+Updates only the specified fields of the resource
+
+6.HEAD: Similar to GET, but only retrieves the headers (without the body/content).
+
+7.OPTIONS: Ask the server which methods are allowed for a specific resource.
+
+8.CONNECT: Establishes a tunnel to the server (used for things like SSL connections).
+
+9.TRACE: Echoes back the received request, mainly used for debugging purposes.
+
+
+
+
+
+Can you explain the concept of state management in BloC?
+What is BloC and its role in Flutter development?
+What are the differences between BloC and other state management solutions like Provider?
+What is the difference between a BLoC and a Cubit in Flutter?
+What is a BehaviorSubject in BLoC?
+What are Bloc events and how are they different from regular events?
+What is a Sink in the context of BloC?
+How is data flow maintained between the UI and the BloC?
+Explain the usage of BlocBuilder,BlocProvider,BlocListener.
+Can multiple BloC's communicate with each other in Flutter?
+
+
+Bloc (Business Logic Components)
+
+
+- Bloc is a way to manage how your app works behind the scenes.
+- It helps to apps run smoothly, especially as they get more complex.
+
+There are two main concepts: states and events:-
+- Events are things that happen in the app, like a button press.
+- Bloc it will listen the changes and gives the right solution for that.
+- States layer like snapshots of the app at a given moment.
+How it works:-
+- When you do something in the app (an event), Bloc notices.
+- It then decides how the app should change based on that event.
+- Finally, it updates the app's state to (Emit)changes that have happened.
+to use in main :  in run App
+
+
+
+
+
+Provider:
+ Provider is a simple way to share and update data in your app!
+- Its help to share the data in the different parts of the app
+- Instead of passing data around from one widget to another,
+ Provider allows any widget to access and update the data directly.
+to use in main :  in run App provider[]
+Multi Provider
+to use for the multiple function
+
+
+
+
+
+BLoC and a Cubit in Flutter:-
+
+Cubit:
+Easier to use: Cubit is straightforward.
+Direct control: You just call a function to change the state (like updating a counter).
+No events: You don’t need to deal with events or streams, just update the state directly.
+
+BLoC:
+More structured: BLoC is more organized but a bit harder to set up.
+Event-driven: You send an event (like pressing a button), and the BLoC listens to that event and changes the state.
+Uses streams: BLoC uses streams to handle data flow between events and states.
+
+
+
+
+
+What are Bloc events and how are they different from regular events:-
+
+BLoC Events: These are used to tell the BLoC to do something, like changing the data in your app.
+ They handle complex actions and update the app’s state (e.g., fetching data, saving information).
+Regular Events: These are simpler things like button clicks or taps that directly change something in the app's UI (e.g., a button press hides a text).
+
+
+
+
+What is a Sink in the context of BloC:-
+
+In the context of BLoC (Business Logic Component) in Flutter, a Sink is like a "pipe",
+where you can send data (such as events) into the BLoC to process.
+You "add" events or data into the Sink, and the BLoC listens to it, processes the events, and then outputs the result as new states.
+
+How it Works in BLoC?
+- Sink: You send an event (e.g., IncrementEvent) to the Sink.
+- BLoC: The BLoC listens to the Sink, processes the event, and then emits a new state.
+- State: The app listens to the BLoC’s state and updates the UI.
+
+
+
+
+
+BlocBuilder,BlocProvider,BlocListener.
+
+1. BlocProvider – Provides the BLoC
+What it does: It makes the BLoC available to your app or part of your widget tree.
+When to use: Wrap your widgets in BlocProvider when you want them to use the BLoC.
+04:00 PM 16-10-2024
+
+2. BlocBuilder – Updates the UI
+BlocBuilder is a widget in Flutter that helps you build a UI based on the state from a BLoC,
+(Business Logic Component). It updates the UI automatically whenever the state changes.
+
+
+
+3. BlocListener – Performs Actions Without UI Changes
+What it does: It listens to state changes and triggers side effects like showing a message or navigating, without changing the UI.
+When to use: Use BlocListener when you want to do things like show a notification or handle an error.
+
+
+consumer in Provider
+
+A Consumer is a widget in Flutter, mainly used with the Provider package, that listens for changes in data.
+ When the data changes, the Consumer rebuilds only the part of the UI that uses that data,
+ which helps improve performance by avoiding unnecessary rebuilds of the entire widget tree..
+
+
+read and watch:-
+
+watch for the listening the state changes and,
+read for the access the current state value or changes 

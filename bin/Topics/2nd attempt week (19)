@@ -1,0 +1,442 @@
+                                                                                2nd attempt Full domain Week(19) 
+
+
+
+Adavantages of using flutter, _/
+Limitations of using flutter,_/
+JIT/AOT,_/
+Oops concepts,_/
+Enumerator,_/ 
+Types of constructors,_/
+Cascade operator,_/
+Try parse,_/
+Finally,_/
+Parameter types in function,-----
+Future.then,_/
+Embedder,_/
+Types of states,_/
+Block builder - consumer,_/
+Read - watch, _/
+Scroll controller,_/
+Expanded - flexible,_/
+Method channel,_/
+SQL queries,_/
+Types of web services,_/
+Disadvantages of recursion,_/
+Inspector _/
+initState_/
+Lazy box_/
+
+
+make table in SQL (practical)
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+|_________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Limitation in Flutter 
+________________________
+
+1.Large App Size: Flutter apps can be larger than native apps because they include the Flutter engine. 
+This can be an issue for mobile apps where size matters.
+
+2.Complex UI Customization: While Flutter provides flexibility with widgets, 
+creating complex custom UIs can be challenging and time-consuming.
+
+3.Limited Support for Wearables and TVs: Currently, 
+Flutter has limited support for platforms like smartwatches, 
+TVs, and other embedded devices.
+
+4.Large App Size: Flutter apps can be larger than native apps because they include the Flutter engine. 
+This can be an issue for mobile apps where size matters.
+
+   Main
+------------
+The main advantage of Flutter is its cross-platform capability—allowing you to build for iOS,
+ Android, web, and desktop from a single codebase, which saves significant development time and resources.
+
+The main disadvantage is its large app size—Flutter apps tend to be bigger due to the built-in engine, which can impact download speeds and storage, especially on mobile devices.
+Limitation in dart
+__________________________________
+
+1.Limited Popularity and Ecosystem
+
+2.Strong Support for Asynchronous Programming: 
+
+
+  JIT/AOT
+____________ 
+
+JIT (Just-In-Time)
+
+ - What it is: JIT compiles Dart code into machine code while the program is running.
+ - When it happens: Just before the code needs to run.
+Advantage:
+ - Quick Changes: we can change our code and see results immediately.
+ - Hot Reload: In Flutter, you can update your app without restarting it.
+Disadvantage:
+ - Slow Start: the app might take longer to open.
+
+----------------------------------------------------------------------------------------
+
+AOT (Ahead-Of-Time)
+
+ - : AOT compiles Dart code into machine code before we run the program.
+ - When it happens: While you're building the app.
+Advantage:
+ - Fast Start: the app opens quickly because it’s already ready to go.
+ - Better Performance: It runs faster and smoother.
+Disadvantage:
+ - Longer Build Time: It takes more time to prepare the app for release.
+
+
+
+  Oops concepts
+_________________
+
+ - OOP, or Object-Oriented Programming, is a way to organize code so it’s easier to build,
+understand, and maintain. It’s based on four main ideas:
+
+1.Class and Object :-
+---------------------
+ - Class: A class is like a blueprint or recipe. It describes what the things what it can do.
+ - Object: An object is a thing made from the class (like a cookie made from a cookie cutter).
+
+
+1. Class and Object
+Real-life example: Think of a blueprint of a house as a class. It has details like the number of rooms, type of windows, etc.
+Object: When you actually build a house from that blueprint, it becomes an object. You can build multiple houses (objects) from the same blueprint (class), each with its own specific details.
+2. Encapsulation
+Real-life example: A TV remote hides its inner wiring and circuitry from us. All we see are the buttons on the surface, and we know what each button does without needing to know how the remote is built inside.
+In OOP: Encapsulation keeps the complex parts hidden and only shows what’s needed to use it.
+3. Inheritance
+Real-life example: A child inherits traits from their parents, like eye color or height. The child doesn’t need to recreate these traits—they get them automatically.
+In OOP: A new class can inherit properties and behaviors from an existing class, like a “Bird” class can inherit from an “Animal” class and get traits like “breathing” or “moving.”
+4.Polymorphism
+Real-life example: A smartphone has a “volume up” button. When you press it, 
+it can raise the volume for calls, music, or video, depending on what’s open. 
+The same button (action) does different things based on the context.
+
+
+
+    Enumerator 
+_________________
+
+ - An enum is like a list of choices. It helps us make code clearer by naming each choice.
+
+Why Use It?
+--------------
+Keeps Options Together: Like a menu of choices (like days or colors).
+Easy to Understand: Instead of random numbers or words, you get named choices that are clear.
+
+
+
+Types of Constructors
+_____________________
+
+
+
+1. Default Constructor
+What it is: A constructor that Dart creates for you automatically if you don’t write any constructor yourself.
+Why it’s useful: It lets you create an object without needing any extra information.
+
+
+
+2. Parameterized Constructor
+What it is: A constructor that takes parameters (extra values) to set up the object with specific values.
+Why it’s useful: It lets you set values at the time of creating the object.
+
+
+
+3. Named Constructor
+What it is: A constructor with a specific name.
+Why it’s useful: It allows creating the object in multiple ways.
+
+
+4. Redirecting Constructor
+What it is: A constructor that calls another constructor in the same class.
+Why it’s useful: It helps avoid repeating code by reusing another constructor.
+
+
+
+5. Constant Constructor
+What it is: A constructor that creates constant objects that can’t be changed.
+Why it’s useful: Helps create objects that are fixed and don’t change (like configuration settings).
+
+
+6. Factory Constructor
+What it is: A special constructor that can create objects conditionally. It might return a new object or an existing one.
+Why it’s useful: Ideal for creating a single instance (Singleton) or when you want custom logic before creating the object.
+
+
+
+ Try parse
+___________
+
+ - In Dart, tryParse is used to safely change a String to a number, like an int or a double. 
+ - If the conversion doesn’t work, it just returns null instead of causing an error. 
+ - This is helpful for handling user input that might not be in the right format.
+
+
+
+// Try parse
+
+// void main(){
+//   String number = '1234';
+//   int? result = int.tryParse(number);
+//   print(result);
+// }
+
+ Finally
+_________
+
+
+ - In Dart, finally is used with try-catch to run some code no matter what happens, whether there's an error or not. It’s often used for cleanup tasks.
+purpose: It is part of error handling.
+Function: It lets you run code that always happens, whether an error occurs or not.
+
+ - finally -  code that always run 
+
+ - try block: You try to do something (like dividing numbers).
+
+ - If it works, great! If it doesn’t (like dividing by zero), it goes to the catch block.
+ - catch block: If there was an error, it catches it and shows an error message.
+
+ - finally block: This runs after the try and catch.
+
+
+ Future.then
+_____________
+
+
+ - In Dart, Future.then is used to handle the result of an asynchronous operation.
+   A Future represents a value that will be available at some point in the future, 
+   and then allows you to specify what to do when that value is ready.
+
+Example: Think of it like ordering food; you wait for the food to arrive, and then you eat when it gets there.
+
+
+
+What is an Embedder
+_____________________
+
+An embedder is something that helps Dart code run in different places, like on your phone, computer, or in a browser.
+
+. Flutter:
+Runs Dart code on mobile and desktop apps.
+
+2. Web:
+Turns Dart code into JavaScript to run in a browser.
+
+3. Dart VM:
+Runs Dart code on servers or in the terminal.
+
+
+
+ Types of states:-
+____________________
+
+
+1. Ephemeral State: Local to a widget, short-lived.
+
+2. App State: Global, shared across the app.
+
+3. Inherited Widget State: Passed down the widget tree.
+
+4. Async State: Based on asynchronous operations. 
+
+5. Reactive State: Automatically updates in response to changes.
+
+
+
+
+1. BlocBuilder
+BlocBuilder is a widget in Flutter that helps you build a UI based on the state from a BLoC (Business Logic Component). 
+It updates the UI automatically whenever the state changes.
+
+
+
+2. BlocConsumer
+purpose: Used with the BLoC (Business Logic Component) pattern to both listen to and rebuild UI based on state changes, 
+and to execute actions when the state changes.
+When to Use: When using the BLoC pattern with a Cubit or Bloc, 
+and you want to both update the UI and perform additional actions (like showing a dialog or navigating) based on state changes.
+
+
+
+Read - watch
+______________
+
+
+ - In Flutter,
+  read and watch are two methods used to access data from a state management provider, such as provider or riverpod
+
+
+read
+-----
+
+ - Gets a value one time.
+ - Use it when we only need the value once, and we don’t need to update the UI if it changes.
+
+
+watch
+-----
+
+ - Listens for changes and automatically updates the UI if the value changes.
+ - Use it when we want the UI to update whenever the value changes.
+
+
+
+
+Scroll controller
+_________________
+
+A ScrollController helps you manage and listen to scrolling in widgets like ListView, SingleChildScrollView,
+or GridView. It allows you to programmatically control the scroll position, 
+detect when the user scrolls, and react to scroll events.
+
+eg:-
+  void dispose() {
+    _scrollController.dispose(); // Clean up the controller
+    super.dispose();
+  }
+
+ return ListView.builder(
+    controller: _scrollController, // Attach the controller here
+    itemCount: 100,
+    itemBuilder: (context, index) {
+      return ListTile(title: Text('Item $index')); // Create list items
+    },
+  );
+
+ 
+
+Expanded - flexible
+___________________
+
+In Flutter, both Expanded and Flexible are widgets used inside Row, Column, 
+or Flex to control how children take the space. 
+They are both useful for creating responsive layouts, but they have slightly different behaviors.
+
+
+1. Expanded
+What it does: Makes a widget take up all the available space in a row or column.
+Use it when: You want a widget to fill up leftover space.
+
+
+2. Flexible
+What it does: Allows a widget to take up space, but it won’t fill all available space. we can decide how much space it gets.
+Use it when: we want to share space between multiple widgets.
+
+
+Method Channel 
+______________
+
+
+ - In Flutter, a Method Channel is a way to communicate between your Dart code (Flutter) and the native code (like Android or iOS). 
+   This is useful when we want to use features that are only available in native code but not directly in Flutter.
+
+ -  (like using device hardware or a specific feature), 
+   we can ask Android or iOS to do it through the Method Channel and then send the result back to Flutter.
+
+
+
+
+SQL queries
+___________
+
+ - SQl we are used in flutter for a local database,
+ - Model class 
+ - And we are creating a db helper to integrate the db for insert, delete and the update the data's in the table 
+
+SELECT: Use db.query to get data.
+WHERE: Add conditions in where and whereArgs like search case filter.
+INSERT: Use db.insert to add new data.
+UPDATE: Use db.update to modify existing data.
+DELETE: Use db.delete to remove data.
+
+
+Types of web services
+______________________
+
+REST: Common and simple, uses URLs to get/send data.
+SOAP: More secure and structured, uses XML.
+GraphQL: Lets you request only specific data.
+gRPC: Super fast, good for complex apps.
+WebSocket: Real-time, for instant data flow.
+
+
+
+Recursion
+_________
+
+Recursion is a programming concept where a function calls itself to solve a problem. 
+Instead of using loops (like for or while), recursion breaks the problem down into smaller, manageable pieces.
+
+
+
+Disadvantages of recursion
+____________________________
+
+
+1. Uses More Memory: Can lead to stack overflow.
+2. Can Be Slower: Extra time from multiple function calls.
+3. Hard to Debug: Tricky to trace errors.
+4. Limited Depth: Maximum call limit can cause crashes.
+5. Risk of Infinite Recursion: Incorrect base case may lead to endless calls.
+
+
+initState
+__________
+
+
+ - Definition: initState is a special method in Flutter that runs when a stateful widget is created.
+ - Purpose: It is used to set up things before the widget shows up on the screen.
+
+
+1. Runs Once: It runs only one time, right after the widget is made.
+
+2. Setup Code: Use it to:
+
+ - Set initial values (like variables).
+ - Start timers or animations.
+ - Load data.
+
+ for example : fetching the data from the API so showing the,
+ circle indicator for the loading until the data fetched from the API.
+When it fetched the data from the API will be displayed 
+
+
+
+
+What is Lazy Box?
+_________________
+
+ - Lazy Box means loading data only when you need it, instead of all at once.
+ - This helps make your app faster and use less memory.
+
+
+Advantage of lazy Box:-
+
+Improved Performance
+Reduced Memory Usage
+Better User Experience
+Lower Network Usage
+eg youtube while scrolling from the home interface its loading only the time of scrolling 
+
+
+Inspector
+__________
+
+In Dart and Flutter, Inspector refers to tools or widgets that help you debug and inspect your app’s widgets, layout, and other properties.
+IDEs like Visual Studio Code and Android Studio. 
+
+
+
+Scroll physics
+______________
+
+BouncingScrollPhysics:
+Used in iOS style, allowing the content to bounce back if scrolled past the edges.
+ClampingScrollPhysics:
+Common in Android, it stops abruptly at the edge of the scrollable content.
+NeverScrollableScrollPhysics:
+Disables scrolling completely.

@@ -1,0 +1,220 @@
+Week 16 (API) Application programing interface
+
+ 
+ 	
+Pendings:
+
+Add more pages in the app,
+Webservise,'✅
+Patch - put,✅
+Authentication token✅,
+Pass data in post,
+Interceptor✅, 
+Status code '✅,
+Model class✅,
+Json decode - encode ✅,
+Handle exceptions✅,
+Debouncer✅,
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.API
+
+An API (Application Programming Interface) is a set of rules and tools that allows different software applications to communicate with each other. It's like a bridge that lets one program interact with another, even if they are built differently.
+
+For example, if you are using a weather app on your phone, that app might use an API to get the latest weather data from a weather service. The weather service provides the data through its API, and the app retrieves it to display to you.
+
+APIs define the methods and data formats that applications can use to request and exchange information.
+
+eg:- restaurant 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+ `
+2.HTTP
+
+HTTP (Hypertext Transfer Protocol) is the way your web browser and websites communicate with each other.
+
+Think of it like a language they use to request and send data. When you type a website address (URL) and hit enter, your browser sends an HTTP request to the website's server asking for the page. The server replies with an HTTP response, sending the website's content back to your browser to display.
+
+So, HTTP is just the method that allows your browser and websites to "talk" and exchange information.
+
+
+HTTP methods 
+
+1.GET: Retrieve data from the server.
+
+2.POST: Send data to the server, often to create something new (e.g., submitting a form).
+
+3.PUT: Replace existing data on the server with new data.
+
+4.DELETE: Remove data from the server.
+
+5.PATCH: Partially update existing data.
+Updates only the specified fields of the resource
+
+6.HEAD: Similar to GET, but only retrieves the headers (without the body/content).
+
+7.OPTIONS: Ask the server which methods are allowed for a specific resource.
+
+8.CONNECT: Establishes a tunnel to the server (used for things like SSL connections).
+
+9.TRACE: Echoes back the received request, mainly used for debugging purposes.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Webservice 
+it's a contend of a API,
+A web service in an API is a way for two different computers or apps to talk to each other over the internet
+ It's like a bridge that lets them share information, even if they're built using different tools or languages.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Interceptor 
+
+what is interceptors?
+
+Interceptors act as middlemen in the communication process between your application and a server. They allow you to:
+
+Modify Requests: Add headers, transform data, or log information before the request is sent.
+Modify Responses: Transform response data or log it before it's processed by your app.
+Handle Errors Globally: Manage errors in a centralized way rather than handling them in every request.
+
+Common Use Cases for Interceptors
+
+Authentication: Automatically attach tokens or credentials to every request.
+Logging: Log all requests and responses for debugging and analysis.
+Error Handling: Handle errors globally instead of in each individual API call.
+Response Transformation: Convert response data into a desired format before passing it to the rest of your application.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Authentication token 
+
+its a communication b/w client and server 
+
+Purpose: Tokens are used to prove that a user is logged in and has the right permissions to access certain resources.
+
+How it Works:
+
+Login: When a user logs in, the server generates a token.
+Storage: This token is sent back to the client (often stored in local storage or cookies).
+Subsequent Requests: For future requests, the client sends this token along with the request (usually in the header).
+Validation: The server checks the token to see if it’s valid. If it is, access is granted.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+status code 
+
+1. Informational (100-199)
+
+2. Success (200-299)
+
+3. Redirection (300-399)
+
+4. Client Error (400-499)
+
+5. Server Error (500-599)
+
+
+
+REST API (Representational State Transfer API)
+
+
+What it is: A REST API is a specific type of API that works over the web using the internet’s language (HTTP).
+Example: It's like ordering food online: you make a request (e.g., a pizza) and get a response (your order delivered).
+How it works: It uses basic commands like:
+GET (to read data, like seeing a menu),
+POST (to send data, like placing an order),
+PUT (to update something, like changing your order),
+DELETE (to remove something, like canceling an order).
+Rules: REST APIs must follow specific rules, like not remembering anything between requests (statelessness).
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Types of API
+
+
+REST APIs:
+
+Use HTTP to access resources and follow specific rules (as we discussed earlier).
+
+
+SOAP APIs:
+
+-								
+What it is: A protocol-based API that uses XML for sending data.
+More Complex: SOAP follows strict rules and is often used in enterprise applications (e.g., banking).
+
+
+GraphQL APIs:
+
+What it is: A query-based API where clients request specific data, giving them more control over what they get.
+Example: A Facebook GraphQL API that lets developers ask for only the data they need.
+
+
+WebSocket APIs:
+
+What it is: APIs that allow real-time communication between the client and server.
+Example: Used for live chat apps or real-time data updates (e.g., stock prices).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Debouncer
+
+A debouncer is a tool that makes sure a function runs only after a pause in activity, rather than running every single time an action happens quickly.
+
+
+
+class Movies{
+  String backdroppath,
+String titile,
+String originaltitile,
+double voteAverage,
+String OverView
+DateTime releaseDate
+
+}
+
+Movies({
+Required this.backdroppath
+Required this.originaltitile
+
+Required this.titile
+
+Required this.voteAverage
+
+Required this.OverView
+ 
+});
+
+Factory Movies.formJson(Map<string,dynamic> map) => movies (
+sadfsd : json[''])??"",
+
+
+post method
+___________
+
+
+var response = await http.post(
+Url.parse(url),
+headers: {
+'content type':'applicvation/json'
+},
+body: jsonEncode(movieData)
+);
+
+if(response.statusCode == 201){
+print('success);
+print('response: ${response.body}')
+}else{
+print('failed);
+print('response: ${response.body}');
+print('statuscode ${response.statusCode}')
+}
+
+
+
+
+
+

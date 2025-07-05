@@ -93,7 +93,7 @@ Authentication token
 its a communication b/w client and server 
 
 Purpose: Tokens are used to prove that a user is logged in and has the right permissions to access certain resources.
-
+ 
 How it Works:
 
 Login: When a user logs in, the server generates a token.
@@ -148,6 +148,56 @@ What it is: A protocol-based API that uses XML for sending data.
 More Complex: SOAP follows strict rules and is often used in enterprise applications (e.g., banking).
 
 
+
+
+
+
+🔷 SOAP (Simple Object Access Protocol)
+A strict and formal way of sending data.
+
+Uses XML to send and receive data.
+
+Works only with POST method.
+
+More secure and standardized (often used in banking, enterprise apps).
+
+Slower and heavier because of more rules and data format.
+
+💬 Think of SOAP like sending a registered letter with lots of paperwork and rules.
+
+🔷 REST (Representational State Transfer)
+A flexible and simple way of sending data.
+
+Uses JSON (mostly) or XML.
+
+Can use GET, POST, PUT, DELETE methods.
+
+Faster and lighter; popular in web and mobile apps.
+
+Easier to use and understand.
+
+💬 Think of REST like sending a text message – quick and easy, but still effective.
+
+
+
+Encoding and Decoding
+--------------------
+
+🔹 Encoding (Object ➝ JSON String)
+You convert a Dart object (e.g., a class or map) into a JSON string.
+
+This is used when sending data to an API or saving it.
+
+
+🔹 Decoding (JSON String ➝ Object)
+You convert a JSON string into a Dart Map or object.
+
+This is used when receiving data from an API.
+
+
+
+
+
 GraphQL APIs:
 
 What it is: A query-based API where clients request specific data, giving them more control over what they get.
@@ -187,7 +237,6 @@ Required this.voteAverage
 Required this.OverView
  
 });
-
 Factory Movies.formJson(Map<string,dynamic> map) => movies (
 sadfsd : json[''])??"",
 
@@ -212,6 +261,99 @@ print('failed);
 print('response: ${response.body}');
 print('statuscode ${response.statusCode}')
 }
+
+
+
+
+
+
+DSA
+___
+
+Graph
+
+A graph is a way of showing connections between things. It is made up of dots (called nodes or vertices) and lines (called edges) that connect them.
+
+Think of a Graph Like a Map
+Imagine a city map with different places (like homes, schools, and stores) connected by roads. Each place is a node, and each road is an edge.
+
+Types of Graphs
+Undirected Graph – The connections have no direction.
+
+Example: A friendship network. If A is a friend of B, then B is also a friend of A.
+Directed Graph (Digraph) – The connections have direction.
+
+Example: A Twitter following system. If A follows B, B does not have to follow A.
+Weighted Graph – The edges have numbers (weights) that show the strength or cost of the connection.
+
+Example: A road map where each road has a distance.
+Where Are Graphs Used?
+Social Media – Connecting people (friends on Facebook, followers on Instagram).
+Google Maps – Finding the shortest path from one place to another.
+Recommendation Systems – Suggesting friends, products, or movies.
+Network Security – Detecting cyber-attacks.
+
+
+
+types of tree
+____________
+
+
+1. Binary Tree
+
+2. Binary Search Tree (BST)
+
+3. AVL Tree (Self-Balancing BST)
+
+4. Heap Tree
+
+5. Trie (Prefix Tree)
+
+
+AVL tree
+_______
+
+What is an AVL Tree?
+An AVL Tree is a self-balancing Binary Search Tree (BST) where the height difference (balance factor) between the left and right subtrees of any node is at most 1.
+
+This balancing helps in faster searching, inserting, and deleting, making it more efficient than a normal BST.
+
+How It Works?
+Balance Factor Calculation:
+
+Balance Factor (BF) = Height of Left Subtree - Height of Right Subtree
+If BF is -1, 0, or 1, the tree is balanced.
+If BF is less than -1 or greater than 1, the tree is unbalanced. 
+Rotations to Maintain Balance:
+If inserting or deleting a node makes the tree unbalanced, we rotate the tree to restore balance.
+
+There are 4 types of rotations:
+z
+Right Rotation (LL Rotation) – When the left subtree is too tall.
+Left Rotation (RR Rotation) – When the right subtree is too tall.
+Left-Right Rotation (LR Rotation) – When the left child has a taller right subtree.
+Right-Left Rotation (RL Rotation) – When the right child has a taller left subtree.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,282 @@
+BW-1
+
+
+Dart Topics
+Var & Dynamic ✅
+Primitive and Non-Primitive Data Types ✅
+async* ✅
+Streams ✅
+Null Aware Operators (?, ??, ??=) ✅
+Variables ✅
+Instance Variables vs Local Variables
+Main Function ✅
+Mixin ✅
+Final and Const✅
+JIT/AOT ✅
+OOP Concepts ✅
+Enumerator ✅
+Types of Constructors ✅
+Try Parse ✅
+Finally
+Future.then ✅
+What is an Embedder ✅
+Recursion 
+.then
+.whenComplete
+convert an array to linked list
+
+Lamda Functions🔴🔴🔴🔴
+
+
+binry search 🔴🔴🔴
+recursion adv and dis run time and compile time 
+how to convert linked list to 2bleLinked list 
+Var & Dynamic
+--------------
+
+
+In Dart, both var and dynamic are used to declare variables without specifying their type, but they behave differently.
+
+1. Var (Type is Fixed After First Value)
+Automatically detects the type based on the first assigned value.
+Cannot change to a different type later.
+Faster than dynamic because the type is known at compile time.
+
+1️⃣ When to Use var (Type is Fixed After First Value)
+🔹 Use var when you know the type will not change.
+🔹 It is faster and safer because Dart checks the type at compile time.
+
+📌 Real-Life Example: Doctor Booking App (Cure Connect)
+✅ Use var for storing fixed details like doctor name, age, and specialization.
+
+
+
+2. dynamic (Type Can Change Anytime)
+Can hold any type of value (String, int, bool, etc.).
+Slower than var because Dart checks the type at runtime.
+Good for unknown types (e.g., data from APIs).
+
+
+2️⃣ When to Use dynamic (Type Can Change)
+🔹 Use dynamic when the type can change or is unknown at first.
+🔹 Useful for API responses, user input, and mixed data types.
+
+📌 Real-Life Example: Fetching Doctor Profile from an API
+✅ Use dynamic when getting data from Firebase or an API, because the structure may change.
+
+
+
+Mixin
+-----
+Mixins are useful when you need to share common functionality across multiple, unrelated classes without inheritance.
+
+Use Case: Reuse the same validation logic (e.g., email, password) across different forms.
+Mixins are useful when:  Reusing logic across different classes, Avoiding duplicate code
+
+Final and Const
+----------------
+
+Both final and const are used to declare variables that cannot be changed after they are assigned. However, they have some key differences.
+
+1. final Keyword
+Value is assigned only once.
+Can be set at runtime (when the app is running).
+Used when the value does not change after being set but is only known at runtime.
+
+EG:-
+
+In your login page, the user enters their email and password. These values are not fixed; they are set when the app runs.
+final TextEditingController emailController = TextEditingController 
+so based on user input the type maybe change 
+
+
+2. const Keyword
+Value is assigned at compile-time (before the app runs).
+Cannot be changed at runtime.
+Used for values that are fixed and known at compile-time.
+
+
+
+  JIT/AOT
+____________ 
+
+
+Both AOT (Ahead-of-Time) and JIT (Just-in-Time) are compilation techniques used in programming, especially in languages like Dart (Flutter), Java, and JavaScript.
+
+
+JIT (Just-In-Time)
+
+ - What it is: JIT compiles Dart code into machine code while the program is running.
+ - When it happens: Just before the code needs to run.
+Advantage:
+ - Quick Changes: we can change our code and see results immediately.
+ - Hot Reload: In Flutter, you can update your app without restarting it.
+Disadvantage:
+ - Slow Start: the app might take longer to open.
+
+----------------------------------------------------------------------------------------
+
+AOT (Ahead-Of-Time)
+
+ - : AOT compiles Dart code into machine code before we run the program.
+ - When it happens: While you're building the app.
+Advantage:
+ - Fast Start: the app opens quickly because it’s already ready to go.
+ - Better Performance: It runs faster and smoother.
+Disadvantage:
+ - Longer Build Time: It takes more time to prepare the app for release
+
+
+
+ Future.then
+_____________
+
+
+ - In Dart, Future.then is used to handle the result of an asynchronous operation.
+   A Future represents a value that will be available at some point in the future, 
+   and then allows you to specify what to do when that value is ready.
+
+Example: Think of it like ordering food; you wait for the food to arrive, and then you eat when it gets there.
+Eg:- message notifications
+
+
+
+What is an Embedder
+_____________________
+
+An embedder is something that helps Dart code run in different places, like on your phone, computer, or in a browser.
+
+. Flutter:
+Runs Dart code on mobile and desktop apps.
+
+2. Web:
+Turns Dart code into JavaScript to run in a browser.
+
+3. Dart VM:
+Runs Dart code on servers or in the terminal.
+
+
+
+Variables
+---------
+ 
+Variables in Dart (Flutter) – Simple Explanation
+A variable is like a container that holds a value. You can store numbers, text, or other data in a variable and use it later.
+
+var (type inferred)
+dynamic (can hold any type)
+Explicit types (int, double, String, bool, etc.)
+final and const (for immutable variables)
+
+
+
+Constructors
+-----------
+
+A constructor is a special function in programming that is automatically called when an object of a class is created. It is used to initialize the object’s properties.
+
+
+parse - tryparse
+----------------
+
+In Dart, parse and tryParse are used to convert strings into numbers (like int or double).
+
+parse is strict and throws an error if the conversion fails.
+
+tryParse is safe and returns null if the conversion fails.
+
+1. Using parse
+
+parse is used to convert a string into a number, but it fails if the string is invalid.
+
+
+2. Using tryParse
+
+tryParse is a safer alternative. If the string is not a number, it returns null instead of crashing.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the concepts in detail,
+Check oops concepts,✅
+Different keywords and its usages,
+Operators in dart,✅
+Parameter types in functions,✅
+what are the diff b/w the Async-isolates✅
+Check ds topics in detail,
+Workout more logical questions 
+where we using or which case we are using the inheritance 
+how to convert linked list to 2bleLinked list 
+
+ What is oops
+ ------------
+
+What is OOP? (Object-Oriented Programming)
+OOP (Object-Oriented Programming) is a way of writing code where we use objects.
+An object is like a real-world thing (e.g., a car, doctor, or patient). It has:
+✔ Properties (like name, color, or age).
+✔ Actions (like driving, speaking, or treating patients).
+To implement real-world concepts in coding
+OOP makes code organized, reusable, and easy to manage.
+
+
+
+Encapsulation
+-------------
+
+What is Encapsulation?
+Encapsulation means keeping the internal details of a class hidden and allowing access only through methods. We make variables private (_variableName) and provide getter and setter methods.
+
+
+
+ Operators in dart
+-------------------
+An operator is a symbol that performs an action on values or variables.
+
+Dart Operators (Short & Simple)
+Arithmetic Operators – Used for math.
+
++ (Add), - (Subtract), * (Multiply), / (Divide, decimal), ~/ (Divide, whole number), % (Remainder).
+Comparison Operators – Compare values (returns true or false).
+
+== (Equal), != (Not equal), > (Greater), < (Smaller), >= (Greater or equal), <= (Smaller or equal).
+Logical Operators – Used for conditions.
+
+&& (AND: both true), || (OR: one true), ! Exclamation (NOT: reverse).
+These are the basics of Dart operators!
+
+
+
+
+what are the diff b/w the Async-isolates
+---------------------------------------
+
+In Flutter (Dart), both async and isolates help in running tasks without blocking the app. But they are used for different types of tasks.
+
+
+1. async (Future and Stream) – For Simple Background Tasks
+Runs on the main thread (UI thread).
+Best for tasks like network requests, database calls, and file reading.
+Uses await to wait for the task to complete without blocking the UI.
+
+EG:-Project Example: Fetching Doctor Details
+🔹 When a user opens the app, it fetches doctor details from Firebase.
+🔹 This does not block the UI, so the app stays responsive.
+
+
+2. Isolates – For Heavy Background Tasks
+Runs on a separate thread (parallel execution).
+Best for CPU-heavy tasks like image processing, data encryption, and complex calculations.
+Uses message passing to communicate with the main thread.
+
+EG:-Project Example: Generating a Large PDF Report
+🔹 In a doctor app, when a doctor exports patient data, it runs a heavy calculation (generating a 20-page PDF).
+🔹 If this runs on the main thread, the app lags or freezes.
+🔹 Instead, we use an isolate so the UI stays smooth.
+
+
+
+
+
+

@@ -29,12 +29,12 @@ Lazy box_/
 
 
 make table in SQL (practical)
-________________________________________________________________________________________________________________________________________________________________________________________________________________
+ _______________________________________________________________________________________________________________________________________________________________________________________________________________
 |_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Limitation in Flutter 
 ________________________
-
+ 
 1.Large App Size: Flutter apps can be larger than native apps because they include the Flutter engine. 
 This can be an issue for mobile apps where size matters.
 
@@ -89,17 +89,7 @@ Disadvantage:
 
 
 
-  Oops concepts
-_________________
-
- - OOP, or Object-Oriented Programming, is a way to organize code so it’s easier to build,
-understand, and maintain. It’s based on four main ideas:
-
-1.Class and Object :-
----------------------
- - Class: A class is like a blueprint or recipe. It describes what the things what it can do.
- - Object: An object is a thing made from the class (like a cookie made from a cookie cutter).
-
+  
 
 1. Class and Object
 Real-life example: Think of a blueprint of a house as a class. It has details like the number of rooms, type of windows, etc.
@@ -185,6 +175,7 @@ ___________
 //   print(result);
 // }
 
+
  Finally
 _________
 
@@ -212,7 +203,7 @@ _____________
    and then allows you to specify what to do when that value is ready.
 
 Example: Think of it like ordering food; you wait for the food to arrive, and then you eat when it gets there.
-
+Eg:- message notifications
 
 
 What is an Embedder
@@ -226,10 +217,10 @@ Runs Dart code on mobile and desktop apps.
 2. Web:
 Turns Dart code into JavaScript to run in a browser.
 
-3. Dart VM:
+3. Dart VM:(virtual machine)
 Runs Dart code on servers or in the terminal.
 
-
+ 
 
  Types of states:-
 ____________________
@@ -282,7 +273,6 @@ watch
 
  - Listens for changes and automatically updates the UI if the value changes.
  - Use it when we want the UI to update whenever the value changes.
-
 
 
 
@@ -402,7 +392,7 @@ __________
 
  for example : fetching the data from the API so showing the,
  circle indicator for the loading until the data fetched from the API.
-When it fetched the data from the API will be displayed 
+ When it fetched the data from the API will be displayed 
 
 
 
@@ -415,6 +405,7 @@ _________________
 
 
 Advantage of lazy Box:-
+______________________
 
 Improved Performance
 Reduced Memory Usage
@@ -424,7 +415,7 @@ eg youtube while scrolling from the home interface its loading only the time of 
 
 
 Inspector
-__________
+ ________
 
 In Dart and Flutter, Inspector refers to tools or widgets that help you debug and inspect your app’s widgets, layout, and other properties.
 IDEs like Visual Studio Code and Android Studio. 
@@ -439,4 +430,28 @@ Used in iOS style, allowing the content to bounce back if scrolled past the edge
 ClampingScrollPhysics:
 Common in Android, it stops abruptly at the edge of the scrollable content.
 NeverScrollableScrollPhysics:
-Disables scrolling completely.
+Disables scrolling completely
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                                                 DS weak 1 and 2 
+                                                                                -----------------
+
+
+
+
+
+Linked List Time complexity 
+-----------------------------
+Access/Search → O(n)
+Insertion at Head → O(1)
+Insertion at Tail → O(1) (if tail pointer exists) / O(n) (if not)
+Deletion at Head → O(1)
+Deletion at Tail → O(n) (Singly Linked List) / O(1) (Doubly Linked List with tail pointer)
+Insertion/Deletion in Middle → O(n)
+
+

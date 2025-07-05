@@ -1,0 +1,308 @@
+BW-2
+
+1.Advantages and Disadvantage of Flutter
+2.JIT/AOT (specific to Flutter’s performance in development and release mode)
+3.Types of states in Flutter
+4.BlocBuilder - BlocConsumer
+5.Read - Watch (State management in Flutter, e.g., Provider/Riverpod)
+6.Scroll Controller
+7.Expanded - Flexible (Flutter layout widgets)
+8.Method Channel (Flutter’s communication with native platforms)
+9.Inspector (Flutter’s debugging tool)
+10.initState (Flutter lifecycle method)
+11.Lazy Box (Flutter + Hive storage concept)
+12.Navigation & Routing
+13.State Management (Provider, GetX, BLoC)
+14.Firebase Authentication15.API
+16.Dependency Injection 
+
+BW 2nd
+
+Didn’t prepared well,
+Try to revise the entire topics,
+State management section,
+Simple-reactive state management,
+Package- plugin,
+Method channel,
+Sql-nosql,
+Sql queries,
+Hive concepts,
+Web services,
+Status codes,
+
+
+Rohit Pendings
+--------------
+
+
+Trie-search ,start with 
+Graph -bfs,DFS,
+Bst-insertion and traversal ,
+Palindrome.
+
+Bst validation theory explanation
+
+Flutter Advantages
+
+1.Single Codebase;
+Write once, run everywhere (iOS, Android, Web)
+Saves time and money in development
+
+
+2.Best User interface
+Rich set of pre-built widgets                                                                                                                                                                                                                                            
+Consistent look across platforms
+
+
+3.Hot Reload
+See changes instantly while coding
+Makes development faster and easier
+
+
+
+Flutter Disadvantages:-
+
+1.Large App Size
+Apps are bigger compared to native apps
+Takes more storage space on devices
+
+
+2.Limited Libraries
+Newer platform, so fewer third-party libraries
+Some features might need custom development
+
+
+3.Learning Curve
+New widgets system to learn
+Different from traditional mobile development
+
+
+
+
+
+JIT (Just-In-Time)
+
+ - What it is: JIT compiles Dart code into machine code while the program is running.
+ - When it happens: Just before the code needs to run.
+Advantage:
+ - Quick Changes: we can change our code and see results immediately.
+ - Hot Reload: In Flutter, you can update your app without restarting it.
+Disadvantage:
+ - Slow Start: the app might take longer to open.
+
+----------------------------------------------------------------------------------------
+
+AOT (Ahead-Of-Time)
+
+ - : AOT compiles Dart code into machine code before we run the program.
+ - When it happens: While you're building the app.
+Advantage:
+ - Fast Start: the app opens quickly because it’s already ready to go.
+ - Better Performance: It runs faster and smoother.
+Disadvantage:
+ - Longer Build Time: It takes more time to prepare the app for release.
+
+
+
+
+Expanded - flexible
+___________________
+
+In Flutter, both Expanded and Flexible are widgets used inside Row, Column, 
+or Flex to control how children take the space. 
+They are both useful for creating responsive layouts, but they have slightly different behaviors.
+
+
+1. Expanded
+What it does: Makes a widget take up all the available space in a row or column.
+Use it when: You want a widget to fill up leftover space.
+
+
+2. Flexible
+What it does: Allows a widget to take up space, but it won’t fill all available space. we can decide how much space it gets.
+Use it when: we want to share space between multiple widgets.
+
+
+
+✅ Expanded – Take all the space you can!
+It makes the widget stretch and fill the available space.
+
+It must take up the space, no matter what.
+
+🧱 Think of it like saying:
+
+“Hey, take as much space as possible!”
+
+
+
+
+✅ Flexible – Take space only if you want
+It can take space if needed, but it won’t force the child to stretch.
+
+The child can choose its own size.
+
+🧱 Think of it like saying:
+
+“Take space only if you need it.”
+
+
+
+Method Channel 
+______________
+
+
+ - In Flutter, a Method Channel is a way to communicate between your Dart code (Flutter) and the native code (like Android or iOS). 
+   This is useful when we want to use features that are only available in native code but not directly in Flutter.
+
+ -  (like using device hardware or a specific feature), 
+   we can ask Android or iOS to do it through the Method Channel and then send the result back to Flutter.
+
+
+
+Main in flutter 
+--------------
+main() is the starting point of every Dart program, including Flutter apps. It is the function that gets executed first when the app starts.
+
+
+Run App in flutter
+-------------------
+What is runApp() in Flutter?
+runApp() is the entry point of a Flutter application. It initializes the widget tree and displays the UI on the screen.
+
+
+
+
+
+🔍 What’s Happening in Kotlin Code?
+Part	Explanation
+CHANNEL = "com.example.battery"	                 Must match the channel in Dart
+MethodChannel(...).setMethodCallHandler {}	 Listens for Dart calls
+call.method == "getBatteryLevel"	         Checks if Dart asked for battery
+getBatteryLevel()	                         Gets battery from Android's BatteryManager
+result.success(...)	                         Sends result back to Dart
+
+
+
+
+
+
+
+🔹 What is a Web Service?
+____________________________
+
+A web service is an API (Application Programming Interface) that allows different applications to communicate with each other.
+
+It uses the HTTP protocol to send and receive data.
+Data is usually in JSON or XML format.
+Common operations include GET (fetch data) and POST (send data) requests.
+
+A web service in Flutter allows your app to communicate with a remote server over the internet. This is useful when you need to fetch data, send data, or perform operations on a backend.
+
+
+
+Inspector
+_________
+
+
+The Flutter Inspector helps you debug UI, check widgets, and fix layout issues easily.
+🎯 Summary
+✅ Inspector helps debug UI problems easily.
+✅ Check widget properties and layout issues.
+✅ Use debug options to improve performance.
+✅ In VS Code:
+How to use?
+1️⃣ Run the app (Ctrl + F5).
+2️⃣ Open Command Palette (Ctrl + Shift + P).
+3️⃣ Search for "Flutter: Inspect Widget".
+
+
+
+initState
+__________
+
+
+ - Definition: initState is a special method in Flutter that runs when a stateful widget is created.
+ - Purpose: It is used to set up things before the widget shows up on the screen.
+
+
+1. Runs Once: It runs only one time, right after the widget is made.
+
+2. Setup Code: Use it to:
+
+ - Set initial values (like variables).
+ - Start timers or animations.
+ - Load data.
+
+ for example : fetching the data from the API so showing the,
+ circle indicator for the loading until the data fetched from the API.
+ When it fetched the data from the API will be displayed 
+
+
+What is Lazy Box?
+_________________
+
+ - Lazy Box means loading data only when you need it, instead of all at once.
+ - This helps make your app faster and use less memory.
+
+
+Advantage of lazy Box:-
+
+Improved Performance
+Reduced Memory Usage
+Better User Experience
+Lower Network Usage
+eg youtube while scrolling from the home interface its loading only the time of scrolling 
+
+
+
+Graph - Simple Explanation
+
+A graph is a way to show how things are connected.
+
+Parts of a Graph:
+
+Nodes (Vertices) - The points in a graph.
+
+Edges (Links) - The lines that connect the nodes.
+
+Types of Graphs:
+
+Directed Graph - The connection has a direction (A → B). 
+
+Undirected Graph - The connection has no direction (A − B).
+
+Weighted Graph - The connections have a number (cost or distance).
+
+Unweighted Graph - The connections have no number.
+
+Cyclic Graph - A path forms a loop.
+
+Acyclic Graph - No loops in the path.
+
+Where Graphs Are Used:
+
+Social media (friends on Facebook, followers on Instagram)
+
+Google Maps (finding the shortest route)
+
+Websites (links between web pages)
+
+Computer networks (connecting devices)
+
+Graphs help in solving many real-life problems. They are used in technology, science, and daily life.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

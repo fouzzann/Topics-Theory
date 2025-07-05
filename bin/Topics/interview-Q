@@ -1,0 +1,140 @@
+Interview Questions
+__________________
+
+what is flutter 
+ -------------
+Flutter is an open-source UI framework created by Google for building natively compiled applications for mobile (Android & iOS), web, and desktop from a single codebase. It uses Dart as its programming language.
+
+
+Subscriptions in flutter
+Flutter version dart version
+Keys in flutter
+What is the diffrance between global key and local key
+Is every widget have key ?
+Builders in flutter
+
+
+
+Subscriptions in flutter
+-----------------------
+
+A subscription means you are listening to something that keeps sending updates — like a radio or live news. In Flutter, this is usually done using a Stream.
+
+
+Eg;-
+📱 Scenario: Chat App
+You’re building a chat app. You want the app to show new messages as they arrive — live.
+
+You can use a subscription to listen to the message stream.
+
+
+🧠 What This Code Does:
+Stream.periodic(...) is faking a new message every 2 seconds.
+
+messageSubscription.listen(...) listens to the stream.
+
+It prints a new message every time one comes.
+
+You can stop it anytime with cancel().
+
+
+authentication and authorization
+http vs rest
+Rest api
+aab and apk
+future/async/await
+lazyloading
+const constructor
+
+
+Flutter version dart version 
+----------------------------
+
+Flutter 3.29.3 Updates
+
+Fixed bugs: They fixed problems that were causing apps to crash or work incorrectly
+Made apps faster: Your apps will run smoother and use less battery
+Made design components better: The buttons, menus, and other parts of apps look nicer and work better
+Better tools for fixing problems: The tools you use to find and fix issues in your code got better
+Better web support: Apps that run in web browsers now work more smoothly
+
+
+
+Dart 3.7.2 Updates
+
+Fixed bugs: They fixed problems in the code language itself
+Made code run faster: Your apps will start up quicker and run better
+Better handling of missing data: Improved how the language deals with data that might not exist
+Better coding tools: The tools that help you write code got some improvements
+
+
+
+
+
+
+🗝️ What is a Key?
+A Key is like a name tag for a widget.
+
+It helps Flutter know which widget is which when things change.
+
+
+When the UI updates (like list items changing), Flutter uses Keys to figure out:
+
+Which widget to keep
+
+Which to update
+
+Which to remove or add
+
+Without a key, Flutter may get confused and update the wrong widget.
+
+
+
+
+❓ Does every widget have a Key?
+👉 No, not every widget has a key.
+
+🧱 By default:
+Most widgets don’t need a key. Flutter handles them automatically.
+
+🗝️ When do we add a Key?
+You only add a Key when:
+
+Widgets are in a list and can change/move
+
+You want to keep state (like text input)
+
+You're doing animations or drag & drop
+
+You want Flutter to match widgets accurately
+  
+
+
+
+💡 What is a framework?
+A framework is like a ready-made toolbox for building apps.
+It gives you the tools, parts, and rules to help you build things faster and easier.
+
+🧱 Example:
+Imagine you want to build a house:
+
+Without a framework: You cut the wood, make the bricks, and build everything by yourself.
+
+With a framework: You get ready-made doors, windows, and walls. You just put them together.
+
+🚀 What is Flutter?
+Flutter is a framework made by Google.
+It helps you build apps for Android, iPhone, Web, and Desktop — all with one code.
+
+It gives you:
+
+Ready-to-use designs (called widgets)
+
+Tools to make the app work
+
+A way to show things on the screen
+
+✅ In simple words:
+A framework is a helper kit.
+Flutter is a helper kit to make mobile and web apps quickly and easily.
+

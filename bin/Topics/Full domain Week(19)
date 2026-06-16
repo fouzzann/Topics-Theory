@@ -324,7 +324,10 @@ Makes your app smaller and faster.
 
 ✅ Best for: Uploading to Play Store or App Store
 
+To reduce the app size in Flutter, I follow several approaches:
 
+Build APK with --split-per-abi
+This creates separate APKs for different CPU architectures and reduces the size significantly.
 
 
 
@@ -357,7 +360,7 @@ and managing the communication between your app and the phone's hardware (like t
 3.Embedder
 An embedder is something that helps Dart code run in different places, like on your phone, computer, or in a browser.
 
-. Flutter:
+1. Flutter:
 Runs Dart code on mobile and desktop apps.
 
 2. Web:
@@ -405,6 +408,17 @@ ________________________________________
 ✅ Install Xcode (For iOS Development)
 
 
+1. Xcode (Most Important)
+
+Xcode is the IDE used for iOS development.
+
+2. CocoaPods
+
+Used to manage iOS dependencies.
+
+3. Simulator
+
+iOS Emulator inside Xcode.
 
 
 Animation in flutter 
@@ -433,7 +447,6 @@ Row	Horizontal arrangement
 Stack	Overlapping widgets
 ListView	Scrollable list
 GridView	Grid-based layout
-
 
 
 

@@ -1,0 +1,138 @@
+1. Explain BLoC Architecture
+Bloc (Business Logic Components )
+
+- Bloc is a way to manage how your app works behind the scenes.
+- It helps to apps run smoothly, especially as they get more complex.
+
+There are three main concepts: states and events:-
+- Events are things that happen in the app, like a button press.
+- Bloc help to listen the user and give the output based on the users interactions 
+- States layer like snapshots of the app at a given moment.
+
+How it works:-
+- When you do something in the app (an event), Bloc notices.
+- It then decides how the app should change based on that event.
+- Finally, it updates the app's state to (Emit)changes that have happened.
+to use in main :  in run App
+
+
+
+2. Explain API Integration Flow
+
+Answer:
+
+API integration is the process of getting data from a server and displaying it in the app.
+
+Flow:
+API Request
+↓
+Receive Response
+↓
+Convert JSON to Model
+↓
+Store Data
+↓
+Display in UI
+Steps:
+Create a model class.
+Create an API service.
+Call the API using HTTP.
+Convert JSON data into a model.
+Display the data in the UI.
+Example:
+
+A doctor list API returns doctors, and the app displays them on the screen.
+
+
+
+3. Explain Firebase Authentication
+
+Answer:
+
+Firebase Authentication is a service that helps users log in securely.
+
+Login Methods:
+Email & Password
+Google Login
+Phone Number Login
+
+How to do?
+
+Step 1: Create a Firebase Project
+Go to the Firebase Console.
+Create a new project.
+Add your Android/iOS app.
+Download the configuration file:
+Android → google-services.json
+iOS → GoogleService-Info.plist
+
+Step 2: Add Firebase Packages
+
+Step 3: Initialize Firebase
+
+Step 4: Create User (Sign Up)
+await FirebaseAuth.instance
+    .createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+
+Step 5: Login User
+await FirebaseAuth.instance
+    .signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );   
+
+Step 6: Logout User
+await FirebaseAuth.instance.signOut();
+
+Store Data
+
+await FirebaseFirestore.instance
+    .collection('users')
+    .doc(userId)
+    .set({
+      'name': 'Fouzan',
+      'email': 'fouzan@gmail.com',
+      'phone': '9876543210',
+    });
+
+
+    10. Flutter App Performance Optimization
+
+Answer:
+
+Performance optimization helps make the app faster and smoother.
+
+Methods:
+1. Use const Widgets
+const Text("Hello");
+
+Prevents unnecessary rebuilds.
+
+2. Use ListView.builder
+
+Builds only visible items.
+
+ListView.builder()
+3. Optimize Images
+Compress images
+Cache images
+4. Avoid Unnecessary Rebuilds
+
+Use proper state management like BLoC.
+
+5. Dispose Controllers
+@override
+void dispose() {
+  controller.dispose();
+  super.dispose();
+}
+
+Prevents memory leaks.
+
+Result:
+Faster app startup
+Smooth scrolling
+Better user experience

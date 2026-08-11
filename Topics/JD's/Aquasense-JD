@@ -1,0 +1,764 @@
+1. Explain BLoC Architecture
+Bloc (Business Logic Components )
+
+- Bloc is a way to manage how your app works behind the scenes.
+- It helps to apps run smoothly, especially as they get more complex.
+
+There are three main concepts: states and events:-
+- Events are things that happen in the app, like a button press.
+- Bloc help to listen the user and give the output based on the users interactions 
+- States layer like snapshots of the app at a given moment.
+
+How it works:-
+- When you do something in the app (an event), Bloc notices.
+- It then decides how the app should change based on that event.
+- Finally, it updates the app's state to (Emit)changes that have happened.
+to use in main :  in run App
+
+
+
+2. Explain API Integration Flow
+
+Answer:
+
+API integration is the process of getting data from a server and displaying it in the app.
+
+Flow:
+API Request
+↓
+Receive Response
+↓
+Convert JSON to Model
+↓
+Store Data
+↓
+Display in UI
+Steps:
+Create a model class.
+Create an API service.
+Call the API using HTTP.
+Convert JSON data into a model.
+Display the data in the UI.
+Example:
+
+A doctor list API returns doctors, and the app displays them on the screen.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Explain Firebase Authentication
+
+Firebase Authentication is a service that helps users log in securely.
+
+Login Methods:
+Email & Password
+Google Login
+Phone Number Login
+
+How to do?
+
+Step 1: Create a Firebase Project
+Go to the Firebase Console.
+Create a new project.
+Add your Android/iOS app.
+Download the configuration file:
+Android → google-services.json
+iOS → GoogleService-Info.plist
+
+Step 2: Add Firebase Packages
+
+Step 3: Initialize Firebase
+
+Step 4: Create User (Sign Up)
+await FirebaseAuth.instance
+    .createUserWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+
+Step 5: Login User
+await FirebaseAuth.instance
+    .signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );   
+
+Step 6: Logout User
+await FirebaseAuth.instance.signOut();
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is FCM?
+
+FCM stands for Firebase Cloud Messaging.
+
+It is a service from Firebase that allows you to send push notifications from a server to mobile devices.
+
+Why Do We Use FCM?
+
+To send:
+
+Push Notifications
+Promotional Messages
+Appointment Reminders
+Order Updates
+Chat Notifications
+
+How Does FCM Work?
+Step 1
+
+Install package:
+
+firebase_messaging:
+Step 2
+
+Get Device Token
+
+String? token =
+    await FirebaseMessaging.instance.getToken();
+
+print(token);
+
+Example Token:
+
+eJH7GKd9xK.......
+
+Each device gets a unique token.
+
+Save this token in Firestore or send it to your backend.
+
+Step 5: Listen for Notifications
+FirebaseMessaging.onMessage.listen((message) {
+  print(message.notification?.title);
+});
+
+This is called when the app is open.
+
+Why is the Device Token Important?
+
+The device token identifies a specific device.
+
+Backend
+     ↓
+Device Token
+     ↓
+FCM
+     ↓
+Specific User's Phone
+
+Without the token, FCM doesn't know which phone should receive the notification.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Store Data
+
+await FirebaseFirestore.instance
+    .collection('users')
+    .doc(userId)
+    .set({
+      'name': 'Fouzan',
+      'email': 'fouzan@gmail.com',
+      'phone': '9876543210',
+    });
+
+
+    10. Flutter App Performance Optimization
+
+Answer:
+
+Performance optimization helps make the app faster and smoother.
+
+Methods:
+1. Use const Widgets
+const Text("Hello");
+
+Prevents unnecessary rebuilds.
+
+2. Use ListView.builder
+
+Builds only visible items.
+
+ListView.builder()
+3. Optimize Images
+Compress images
+Cache images
+
+4. Avoid Unnecessary Rebuilds
+Use proper state management like BLoC.
+
+5. Dispose Controllers
+@override
+void dispose() {
+  controller.dispose();
+  super.dispose();
+}
+
+Prevents memory leaks.
+
+Result:
+Faster app startup
+Smooth scrolling
+Better user experience
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to send the iamge or file to the server
+-----------------------------------------
+Simple Interview Answer:
+
+Multipart/form-data is used when we need to send files like images, PDFs, or videos to the server. It allows us to send both text data and files in the same API request.
+
+Example:
+
+When uploading a profile picture, I send the image file along with user details using multipart/form-data.
+
+One-line answer:
+
+Multipart/form-data is an HTTP request type used to upload files to a server. 🚀
+request.files.add(
+    await http.MultipartFile.fromPath(
+      'image',
+      imageFile.path,
+    ),
+  );
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Gradle Configuration?
+
+Gradle is Android's build system. It controls how the app is built.
+
+The main Gradle files are:
+
+android/app/build.gradle
+android/build.gradle
+
+In Gradle, we configure:
+
+App version
+Package name
+SDK version
+Dependencies
+Signing configuration
+Example
+defaultConfig {
+    applicationId "com.example.app"
+    minSdkVersion 21
+    targetSdkVersion 34
+    versionCode 1
+    versionName "1.0.0"
+}
+Interview Answer
+
+Gradle configuration means managing the Android build settings such as SDK versions, dependencies, app versioning, package name, and release build settings.
+
+
+
+How to Deploy a Flutter App to the iOS App Store
+
+1. Create an Apple Developer Account
+
+You need an active Apple Developer account.
+
+2. Configure Your App in Xcode
+
+Open:
+
+open ios/Runner.xcworkspace
+
+In Xcode:
+
+Select Runner
+Go to Signing & Capabilities
+Choose your Team
+Set the Bundle Identifier (e.g. com.fouzan.cureconnect)
+3. Build the iOS Release
+
+Run:
+
+flutter clean
+flutter pub get
+flutter build ios --release
+4. Archive the App
+
+In Xcode:
+
+Product
+  ↓
+Archive
+
+Wait for the archive process to complete.
+
+5. Upload to App Store Connect
+
+After archiving:
+
+Organizer Window
+      ↓
+Distribute App
+      ↓
+App Store Connect
+      ↓
+Upload
+      ↓
+Next
+      ↓
+Upload
+
+Xcode uploads the build to App Store Connect.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REST APIs
+What is a REST API?
+
+A REST API is used to communicate between the mobile app and the server.
+
+The app sends a request and the server sends back data.
+
+Example
+
+In Cure Connect:
+
+Flutter App
+      ↓
+Request Doctor List
+      ↓
+Server/API
+      ↓
+Doctor Data (JSON)
+      ↓
+Display in App
+Common Methods
+Method	Purpose
+GET	Get data
+POST	Create data
+PUT	Update complete data
+PATCH	Update partial data
+DELETE	Delete data
+Interview Answer
+
+REST API is a way for a mobile application to communicate with a backend server. We use methods like GET, POST, PUT, PATCH, and DELETE to fetch, create, update, and delete data.
+
+WebSockets
+What is WebSocket?
+
+WebSocket provides a real-time connection between the app and the server.
+
+Unlike REST API, the connection stays open.
+
+Example
+
+In a chat application:
+
+User Sends Message
+        ↓
+WebSocket Connection
+        ↓
+Server
+        ↓
+Other User Receives Message Instantly
+
+No need to refresh or call the API repeatedly.
+
+REST API vs WebSocket
+REST API	WebSocket
+Request-Response	Continuous Connection
+Connection closes after response	Connection stays open
+Used for normal data fetching	Used for real-time updates
+Less suitable for live chat	Best for live chat
+Real-Life Examples\
+
+REST API
+
+Login
+Register
+Fetch doctors
+Fetch appointments
+Get user profile
+
+WebSocket
+
+Chat applications
+Live notifications
+Live stock prices
+Live sports scores
+Real-time appointment updates
+
+
+
+
+WebSocket Flow in Flutter
+web_socket_channel: ^latest_version
+A WebSocket creates a continuous connection between your Flutter app and the server.
+
+Flow
+Flutter App
+      ↓
+Connect to WebSocket Server
+      ↓
+Connection Established
+      ↓
+Send Message
+      ↓
+Server Receives Message
+      ↓
+Server Sends Response
+      ↓
+Flutter Receives Response Instantly
+Step 1: Add Package
+dependencies:
+  web_socket_channel: ^3.0.0
+Step 2: Create Connection
+import 'package:web_socket_channel/web_socket_channel.dart';
+
+final channel = WebSocketChannel.connect(
+  Uri.parse('wss://echo.websocket.events'),
+);
+
+Here:
+
+ws:// → Normal WebSocket
+wss:// → Secure WebSocket (used in production)
+Step 3: Send Data
+channel.sink.add("Hello Server");
+
+This sends data from Flutter to the server.
+
+Step 4: Listen for Messages
+channel.stream.listen((message) {
+  print(message);
+});
+
+Whenever the server sends data, Flutter receives it immediately.
+
+Step 5: Close Connection
+channel.sink.close();
+
+Usually done in dispose().
+
+@override
+void dispose() {
+  channel.sink.close();
+  super.dispose();
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is async?
+Answer
+
+async is used to mark a function as asynchronous. It allows the function to perform time-consuming tasks without blocking the UI.
+
+Future<void> getData() async {
+}
+2. What is await?
+Answer
+
+await is used inside an async function to wait for a Future to complete before continuing.
+
+final users = await fetchUsers();
+3. Why do we use async/await?
+Answer
+
+We use async/await to handle API calls, database operations, and other time-consuming tasks without freezing the application.
+
+4. What is a Future?
+Answer
+
+A Future represents a value that will be available later after an asynchronous operation completes.
+
+Future<String> getName() async {
+  return "Fouzan";
+}
+5. Difference Between Future and async/await
+Answer
+
+Future is the return type. async/await is the syntax used to work with Futures more easily.
+
+6. What Happens If You Don't Use await?
+
+Example:
+
+var users = fetchUsers();
+print(users);
+
+Output:
+
+Instance of Future
+
+Because the API has not completed yet.
+
+Correct:
+
+var users = await fetchUsers();
+7. What is FutureBuilder?
+Answer
+
+FutureBuilder is a widget used to display data that comes from a Future, such as an API response.
+
+FutureBuilder(
+  future: fetchUsers(),
+  builder: (context, snapshot) {
+    return Container();
+  },
+)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Camera
+Package
+camera:
+image_picker:c
+
+final ImagePicker picker = ImagePicker();
+
+final image = await picker.pickImage(
+  source: ImageSource.camera,
+);
+
+
+2. GPS (Location)
+Package
+geolocator:
+
+Position position =
+    await Geolocator.getCurrentPosition();
+
+print(position.latitude);
+print(position.longitude);
+
+
+
+
+3. Bluetooth (BLE)
+Package
+flutter_blue_plus:
+Flow
+Scan Devices
+      ↓
+Connect Device
+      ↓
+Read Data
+      ↓
+Write Data
+Example
+FlutterBluePlus.startScan();
+
+
+
+When you use Camera, Location, Bluetooth, Notifications, etc., you must add permissions in platform-specific files.
+Android
+
+File:
+
+android/app/src/main/AndroidManifest.xml
+
+Add:
+
+<uses-permission android:name="android.permission.CAMERA"/>
+iOS
+
+File:
+
+ios/Runner/Info.plist
+
+Add:
+
+<key>NSCameraUsageDescription</key>
+<string>This app needs camera access.</string>
+
+Firestore CRUD operations
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+What is IoT?
+
+IoT means devices connected to the internet that can send and receive data.
+
+Examples:
+
+Smart Watch
+Fitness Band
+Smart Bulb
+Smart Lock
+Temperature Sensor
+Heart Rate Monitor
+MQTT
+
+MQTT is a communication protocol used between devices and servers.
+
+Example
+Temperature Sensor
+        ↓
+MQTT Broker
+        ↓
+Flutter App
+
+The sensor continuously sends temperature data, and your Flutter app receives it in real time.
+
+Real Use Cases
+Smart Home Apps
+Factory Monitoring Systems
+Vehicle Tracking
+Medical Monitoring Devices
+BLE
+
+BLE = Bluetooth Low Energy
+
+It is used when your app communicates directly with a nearby device using Bluetooth.
+
+Example
+Smart Watch
+      ↓
+Bluetooth
+      ↓
+Flutter App
+
+The app reads:
+
+Heart rate
+Step count
+Battery level
+Real Use Cases
+Smart Watches
+Fitness Bands
+Smart Locks
+Medical Devices
+
+
+
+
+
+What is Firestore CRUD Operations?
+
+CRUD stands for:
+
+C → Create
+R → Read
+U → Update
+D → Delete
+
+In Firestore, CRUD operations are used to store and manage data in Firebase.
+
+Example: Cure Connect
+
+Suppose a user books an appointment.
+
+Firestore Collection
+appointments
+Document
+{
+  "doctorName": "Dr. John",
+  "patientName": "Fouzan",
+  "date": "2026-06-21"
+}
+1. Create Data
+
+Used to save data into Firestore.
+
+FirebaseFirestore.instance
+    .collection('users')
+    .add({
+  'name': 'Fouzan',
+  'email': 'fouzan@gmail.com',
+});
+Interview Answer
+
+Create operation is used to add new documents to a Firestore collection.
+
+2. Read Data
+
+Used to fetch data from Firestore.
+
+var snapshot = await FirebaseFirestore.instance
+    .collection('users')
+    .get();
+
+for (var doc in snapshot.docs) {
+  print(doc['name']);
+}
+Interview Answer
+
+Read operation is used to retrieve documents from Firestore collections.
+
+3. Update Data
+
+Used to modify existing data.
+
+FirebaseFirestore.instance
+    .collection('users')
+    .doc(userId)
+    .update({
+  'name': 'Fouzan P'
+});
+Interview Answer
+
+Update operation is used to modify existing document fields in Firestore.
+
+4. Delete Data
+
+Used to remove data.
+
+FirebaseFirestore.instance
+    .collection('users')
+    .doc(userId)
+    .delete();
+Interview Answer
+
+Delete operation removes a document from a Firestore collection.
+
+
+In Flutter, both ListView and ListView.builder display lists, but they work differently.
+
+ListView
+
+Creates all items at once.
+
+ListView(
+  children: [
+    Text("Item 1"),
+    Text("Item 2"),
+    Text("Item 3"),
+  ],
+)
+
+✅ Good for:
+
+Small lists
+Fixed number of widgets
+
+❌ Problem:
+
+If you have 1000 items, Flutter creates all 1000 widgets immediately.
+More memory usage.
+Lower performance.
+
+ListView.builder
+Creates items only when needed (lazy loading).
+
+ListView.builder(
+  itemCount: 1000,
+  itemBuilder: (context, index) {
+    return ListTile(
+      title: Text("Item $index"),
+    );
+  },
+)
+
+✅ Good for:
+
+Large lists
+API data
+Chat screens
+Product lists
+Dynamic content
+
+✅ Better performance:
+
+Creates only visible items on the screen.
+Saves memory.
+Interview Answer
+
+ListView builds all children at once, making it suitable for small static lists.
+
+ListView.builder builds items lazily as they become visible, making it more memory-efficient and suitable for large or dynamic lists.

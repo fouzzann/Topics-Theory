@@ -1,0 +1,157 @@
+Widget Lifecycle in Flutter
+
+The lifecycle of a StatefulWidget:
+
+createState()
+Creates the State object.
+initState()
+Called once when the widget is created.
+Used for initialization.
+didChangeDependencies()
+Called after initState().
+Called when inherited widgets change.
+build()
+Builds the UI.
+Can be called multiple times.
+setState()
+Updates the state and triggers build() again.
+didUpdateWidget()
+Called when the parent widget rebuilds and passes new data.
+deactivate()
+Called when the widget is removed from the widget tree temporarily.
+dispose()
+Called when the widget is permanently removed.
+Used to clean up controllers, streams, etc.
+
+
+BlocBuilder vs BlocListener (Simple English)
+BlocBuilder
+
+BlocBuilder is used when you want to change the UI after the state changes.
+
+Example:
+
+Update a counter number.
+Show a list of users.
+Show a loading spinner.
+BlocBuilder<CounterBloc, int>(
+  builder: (context, state) {
+    return Text('$state');
+  },
+)
+
+Simple meaning:
+
+When the state changes, BlocBuilder rebuilds the screen.
+
+BlocListener
+
+BlocListener is used when you want to perform an action after the state changes.
+
+Example:
+
+Show a Snackbar.
+Show a Dialog.
+Navigate to another page.
+BlocListener<CounterBloc, int>(
+  listener: (context, state) {
+    if (state == 5) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Reached 5')),
+      );
+    }
+  },
+  child: Container(),
+)
+
+Simple meaning:
+
+When the state changes, BlocListener performs an action but does not rebuild the screen.
+
+
+1. How do you call an API?
+
+We use the http package to call an API.
+
+import 'package:http/http.dart' as http;
+
+final response = await http.get(
+  Uri.parse('https://jsonplaceholder.typicode.com/users'),
+);
+Interview Answer
+
+We can call an API using the http package. We send a request to the server and receive a response containing data.
+
+2. How do you parse JSON?
+
+JSON data is converted into Dart objects using jsonDecode().
+
+import 'dart:convert';
+
+final data = jsonDecode(response.body);
+Interview Answer
+
+JSON parsing means converting JSON data from the API into Dart objects using jsonDecode().
+
+3. Why create Model Classes?
+
+Model classes help organize API data in a structured way.
+
+Without Model:
+
+print(data['name']);
+
+With Model:
+
+print(user.name);
+Interview Answer
+
+Model classes make code cleaner, easier to maintain, type-safe, and easier to work with API data.
+
+4. GET vs POST
+GET	POST
+Fetch data	Send data
+Data comes from server	Data is sent to server
+Used for reading data	Used for creating data
+
+GET Example
+
+await http.get(url);
+
+POST Example
+
+await http.post(
+  url,
+  body: {
+    'name': 'Fouzan',
+  },
+);
+Interview Answer
+
+GET is used to retrieve data from the server, while POST is used to send data to the server.
+
+5. What happens if the API fails?
+
+The app may:
+
+Show an error message.
+Show a retry button.
+Log the error.
+Display a fallback UI.
+
+Example:
+
+try {
+  final response = await http.get(url);
+
+  if (response.statusCode == 200) {
+    print("Success");
+  } else {
+    print("API Failed");
+  }
+} catch (e) {
+  print("Network Error: $e");
+}
+Interview Answer
+
+If the API fails, I handle the error using try-catch, check the status code, and show an appropriate error message or retry option to the user. 🚀

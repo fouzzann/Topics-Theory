@@ -1,0 +1,291 @@
+
+What is BuildContext?
+----------------------
+BuildContext is the location of a widget in the widget tree. It helps Flutter find things like the theme,
+screen size, parent widgets, and navigation. Flutter automatically provides it inside the build() method.
+
+Easy way to remember
+
+Widget = Person 👤
+
+BuildContext = Person's Address 📍
+
+Flutter uses the address (BuildContext) to know where the widget is and to find everything around it.
+
+
+What is the widget tree?
+-------------------------
+Simple Definition
+
+A Widget Tree is the structure of all widgets in your Flutter app.
+
+Every widget is connected like a tree, where one widget contains another widget.
+
+Simple Definition
+
+A Widget Tree is the structure of all widgets in your Flutter app.
+
+Every widget is connected like a tree, where one widget contains another widget.
+
+MaterialApp
+ └── Scaffold
+      └── Center
+           └── Text("Hello")
+
+           Why is the Widget Tree important?
+
+Flutter uses the Widget Tree to:
+
+Display the UI.
+Know which widget is inside another widget.
+Rebuild only the widgets that need updating.
+Help BuildContext find parent widgets like Theme, Navigator, and MediaQuery.
+
+
+1. Why BLoC?
+-------------
+BLoC separates the UI from the business logic. It makes the code cleaner, easier to maintain, test, and manage, especially in large applications.
+
+
+What is Cubit?
+Simple Answer
+
+Cubit is a simpler version of BLoC.
+
+Instead of using Events, it directly changes the state using methods.
+
+Example
+class CounterCubit extends Cubit<int> {
+  CounterCubit() : super(0);
+
+  void increment() {
+    emit(state + 1);
+  }
+}
+Interview Answer
+
+Cubit is a lightweight version of BLoC. It does not use events. It changes the state directly using methods and emit().
+
+
+
+In Flutter, the most common way is using the connectivity_plus package.
+--------------------------------------------------------------------
+1. Add the package
+dependencies:
+  connectivity_plus: ^6.0.5
+
+
+Difference
+APK	                                   AAB
+Install directly on Android devices	Upload to Google Play Store
+Used for testing and sharing	          Used for publishing apps
+One file for all devices	               Google Play creates optimized APKs for each device
+
+
+
+Deployment in IOS and adroid
+----------------------------
+Android (Google Play Store)
+Step 1: Create a Google Play Developer Account
+Go to the Google Play Console.
+Create a Developer Account.
+Pay the one-time registration fee.
+Step 2: Change App Information
+
+Update:
+
+App Name
+Package Name (cannot be changed after publishing)
+App Icon
+Splash Screen
+Version Number
+
+Example:
+
+version: 1.0.0+1
+Step 3: Create a Keystore
+
+Generate the keystore:
+
+keytool -genkeypair -v \
+-keystore upload-keystore.jks \
+-keyalg RSA \
+-keysize 2048 \
+-validity 10000 \
+-alias upload
+Step 4: Configure Signing
+Create key.properties
+Configure signing in Gradle
+Add the .jks file
+Step 5: Build the App
+flutter clean
+flutter pub get
+flutter build appbundle
+
+Generated file:
+
+build/app/outputs/bundle/release/app-release.aab
+Step 6: Create an App in Google Play Console
+
+Fill in:
+
+App Name
+Default Language
+App Category
+Free or Paid
+Step 7: Upload the AAB
+
+Go to:
+
+Production
+      ↓
+Create Release
+      ↓
+Upload app-release.aab
+Step 8: Complete Store Listing
+
+Add:
+
+App Name
+Short Description
+Full Description
+App Icon
+Feature Graphic
+Screenshots
+Contact Email
+Privacy Policy URL
+Step 9: Fill Required Forms
+
+Examples:
+
+Data Safety
+App Access
+Ads Declaration
+Content Rating
+Target Audience
+Step 10: Publish
+
+Click:
+
+Review Release
+      ↓
+Start Rollout to Production
+
+Google reviews the app.
+
+Usually:
+
+1–7 days
+
+Then it appears on the Play Store.
+
+Android Deployment Flow
+Flutter App
+      ↓
+Generate Keystore
+      ↓
+Configure Signing
+      ↓
+flutter build appbundle
+      ↓
+Upload AAB
+      ↓
+Complete Store Listing
+      ↓
+Publish
+iOS (Apple App Store)
+Step 1: Apple Developer Account
+
+Create an Apple Developer account.
+
+This requires an annual subscription.
+
+Step 2: Open the Flutter Project in Xcode
+ios/
+
+Open:
+
+Runner.xcworkspace
+Step 3: Configure Signing
+
+In Xcode:
+
+Runner
+     ↓
+Signing & Capabilities
+
+Choose:
+
+Apple Team
+Bundle Identifier
+Step 4: Set Version
+
+Example:
+
+version: 1.0.0+1
+Step 5: Build iOS Release
+flutter build ios --release
+
+or
+
+flutter build ipa
+Step 6: Archive the App
+
+In Xcode:
+
+Product
+      ↓
+Archive
+Step 7: Upload to App Store Connect
+
+Use:
+
+Organizer
+      ↓
+Distribute App
+      ↓
+Upload
+Step 8: Create App Store Listing
+
+Add:
+
+App Name
+Description
+Keywords
+Screenshots
+Privacy Policy
+Support URL
+Step 9: Submit for Review
+
+Apple reviews the app.
+
+Usually:
+
+1–3 days
+
+Sometimes longer.
+
+Step 10: Release
+
+After approval:
+
+Release
+
+Your app appears on the App Store.
+
+iOS Deployment Flow
+Flutter App
+      ↓
+Open Xcode
+      ↓
+Configure Signing
+      ↓
+flutter build ipa
+      ↓
+Archive
+      ↓
+Upload
+      ↓
+Submit for Review
+      ↓
+Publish

@@ -1,0 +1,136 @@
+TOI 1st attempt 
+
+1st project
+
+* image picker(how it works in background and the permission handling)
+* how to show a alert dialogue access permission 
+* how to show a alert dialogue if we accessing the gallery
+* what are the permission handling
+* how to send image to the firebase(using Uint8List)
+* how i implemented dynamic view in recipe ingredients adding
+* how to pass values in navigation?
+
+2nd project
+
+* google authentication using firebase (how it works,background working how to get users details)
+* websocket (details explanation of working, how it working)
+* how to upload image directly to server? what will happen,why i use cloudinary?
+* debouncer (background working)
+* REST and SOAP (difference between put and patch)
+* why is Post secure than Get method
+* Intreseptor (details explanation of working, how it working)
+* how to handle multiple services
+* how to cancel the multiple request 
+* how to pass multiple request at a time 
+* About pagenation (how it works, what will happen in the end all data completed)
+
+database sqflite
+
+* what is the purpose of versioning
+* data migration
+* how to filter a data in sqflite
+* primary key and forgin key
+* merger in sqflite
+* unique constrains
+* how to get all data 
+* sql vs noSql
+* Graphsql
+
+
+database Hive
+
+* what is the purpose of lazy loading
+* hive properties like get , put , delete 
+* primary key and forgin key
+* different types of boxes and use cases 🔴
+* how to get all data 
+* lazy box vs regular box 🔴
+* Type id 🔴
+* Type adaptor
+* build runner ?🔴
+
+
+Dart
+
+* sync/async 
+* async vs isolates
+* parameters(write a funtion with required, named and optional, positional)
+* Dart Oops
+* Constructors
+* tryParse
+* mixins
+* interface 🔴
+* Int-num,
+* Map operations,
+* Oops concepts,
+* Tryparse,
+* Null aware,
+* Arrow function,
+* Default parameter,
+* Runtime - compiletime,
+* As, 🔴
+* Instance variable 🔴
+
+* Why does Flutter use Dart?
+* Is Dart a compiled or interpreted language?
+* Explain the concept of hot reload in Flutter.
+* Explain the difference between main() and runApp(). 🔴
+* Explain type promotion and inference in Dart. 🔴
+* What is a callback function in Dart? 🔴
+* What are typedefs? 🔴
+* How using const variable effects app performance?🔴
+* What does * do for strings? eg: print('Hello' * 3)
+* What are the precedence rules for different operators? 🔴
+* What is string interpolation in Dart?🔴
+* What is an exception in Dart and Flutter?🔴
+* What is the purpose of using this in a Dart constructor?🔴
+* What is the purpose of the static keyword in Dart? 🔴
+* What is the purpose of the assert keyword in Dart?🔴
+
+* Arrow function,
+* ?.,🔴
+* Runtime- compiletime,
+* Cast - parse,🔴
+* Positional parameter,
+* Foreach,
+* async*,
+
+
+Flutter
+* Flutter hooks
+* Flutter keys
+* flutter architecutre?
+* tree in flutter and it's uses cases 
+* Gradient color 📞 
+* All about method channel and its implementation
+* how to implement secure storage,what are the funtions in secure storage
+* statefull widget applifecycle(explain each step properly)
+* trees in flutter
+* how to create package
+* how to create a plugin 🔴
+* what is profile mode,how to run in terminal to get profile mode = flutter run --profile
+* Stream
+* Different types of modes 
+* status codes 
+* Rest vs soap ? 📞
+* http vs dio ?
+* write json and parse.📞
+* use of model while decode to dart. 🔴
+* Dependency injection 📞 
+* Dependency injection vs constructor
+* simple state management and reactive state management (examples)
+* obx and getbuilder
+* value notifier and change notifier ? 🔴
+
+Practical
+* stack linked list implement atheen oru element delete 
+* Find the second largest element
+* find middle element ,delete that
+* work on some logical questions without using inbuild methods
+* Stack
+* check palindrome ✅
+* Trie insersion ✅
+* Tree insertion ✅
+* String sorting
+List<int>k=[2,5,6,,2,5,3,2,5,6,2,5,5,2,2,] print the count of the numbers 
+

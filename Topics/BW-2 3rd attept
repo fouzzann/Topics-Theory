@@ -1,0 +1,201 @@
+BW-2 3rd
+
+
+BW 3rd
+
+Clarity issues in explanation,
+Check the integration part of different concepts,
+Valuenotifier,
+Profile build,
+Simple state management,
+Block builder - block consumer,
+Gradient color,
+Scroll physics,
+Scroll controller,
+Method channel,
+Trees in flutter,
+Foreign key,
+Add new column into existing table,
+Sql queries,
+Fluttersecurestorage,
+Json,
+Workout more logical questions 
+
+
+ValueNotifier
+-------------
+
+A ValueNotifier in Flutter is a simple way to manage and update a single piece of data, 
+and automatically update the UI when that data changes — without using a full state management solution like Provider or GetX.
+
+🔹 What is ValueNotifier?
+ValueNotifier<T> is a class that holds a single value (T can be any type, like int, String, bool, etc.).
+
+It notifies listeners when the value changes.
+
+It's a lightweight way to manage state in your app.
+
+
+Simple state management 
+-----------------------
+
+Simple state management in Flutter refers to basic and easy ways to manage and update the state (data) of your app — like UI changes, user inputs, or internal values — without using complex tools or heavy frameworks.
+
+
+
+
+BlocBuilder	Rebuilds the UI when state changes	Only need to show UI changes
+BlocConsumer	Rebuilds the UI + runs code (snackbar, etc.)	Want UI updates and extra actions
+
+
+Gradient color
+-------------
+
+
+
+In Flutter, a gradient is a smooth transition between two or more colors, often used in UI design to enhance visual appeal. Gradients are typically used in Container widgets as background decorations.
+
+Types of Gradients in Flutter:
+Flutter provides several built-in gradient types:
+
+LinearGradient – transition in a straight line (horizontal, vertical, or diagonal).
+
+RadialGradient – circular gradient from a center point.
+
+SweepGradient – circular sweep around a center point.
+
+
+
+
+✅ How to Use Gradient in Flutter
+Use the decoration property of a Container to apply a gradient using BoxDecoration.
+
+
+
+Scroll physics
+--------------
+
+You can set them via the physics: property on scrollable widgets like ListView, SingleChildScrollView, GridView, etc.
+
+🔹 1. BouncingScrollPhysics
+
+🔹 2. ClampingScrollPhysics
+
+🔹 3. NeverScrollableScrollPhysics
+
+🔹 4. AlwaysScrollableScrollPhysics
+
+🔹 5. Combining Scroll Physics (e.g., Bouncing + AlwaysScrollable)
+
+
+
+
+
+Block builder - block consumer
+----------------------------
+
+
+
+In Flutter, when working with Bloc (Business Logic Component) for state management using the flutter_bloc package, you’ll commonly use:
+
+BlocBuilder – to build UI based on Bloc state changes.
+
+BlocConsumer – to both build UI and listen for side effects (like showing a snackbar or navigation).
+
+✅ BlocBuilder
+Rebuilds the UI in response to new states.
+Doesn’t handle side effects (like showing dialogs/snackbars).
+
+
+✅ BlocConsumer
+Combines BlocBuilder and BlocListener.
+Use when you need to build UI and perform side effects (e.g., show snackbar).
+
+
+
+
+
+trees in flutter
+----------------
+
+🌳 What are Trees in Flutter?
+In Flutter, everything is made using widgets — like buttons, text, images, etc.
+
+When you create a UI, Flutter organizes everything in a tree-like structure, like a family tree.
+
+
+
+🔹 1. Widget Tree
+🧱 This is what you write in your code.
+
+➡️ It tells Flutter what the UI should look like.
+
+🔹 2. Element Tree
+🧠 This is what Flutter uses to manage the widgets.
+
+➡️ It helps Flutter know what changed and what to rebuild.
+
+🔹 3. Render Tree
+🎨 This is what actually gets drawn on the screen.
+
+➡️ It handles layout and painting.
+
+
+🌲 What is Tree Shaking in Flutter?
+-----------------------------------------
+
+Tree shaking is a compiler optimization technique that removes unused code from your app during the release build process.
+
+In simple words: Tree shaking removes the parts of your code (including packages) that you imported but never used — making the app smaller and faster.
+
+🔧 Why It's Called "Tree Shaking"?
+Imagine your code like a tree:
+
+The "branches" are functions, classes, libraries.
+
+If certain branches (code) are never used or "called," they get shaken off.
+
+Hence: Tree shaking = Shaking off the unused parts of the code tree.
+
+
+
+Fluttersecurestorage
+--------------------
+
+
+Why use FlutterSecureStorage?
+
+
+
+It stores sensitive information (like tokens, passwords, keys) encrypted.
+
+Uses platform-specific secure storage:
+
+iOS: Keychain
+
+Android: EncryptedSharedPreferences / Keystore
+
+Web: Web crypto APIs (where supported)
+
+FlutterSecureStorage encrypts data so it’s safer.
+
+Great for storing authentication tokens, passwords, API keys, user secrets.
+
+
+
+
+
+SQL queries
+___________
+
+ - SQl we are used in flutter for a local database,
+ - Model class 
+ - And we are creating a db helper to integrate the db for insert, delete and the update the data's in the table 
+
+SELECT: Use db.query to get data.
+WHERE: Add conditions in where and whereArgs like search case filter.
+INSERT: Use db.insert to add new data.
+UPDATE: Use db.update to modify existing data.
+DELETE: Use db.delete to remove data.
+
+

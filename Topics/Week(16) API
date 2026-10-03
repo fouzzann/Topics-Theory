@@ -64,7 +64,7 @@ Updates only the specified fields of the resource
 
 Webservice 
 it's a contend of a API,
-A web service in an API is a way for two different computers or apps to talk to each other over the internet
+ Webservice is a way for two different computers or apps to talk to each other over the internet
  It's like a bridge that lets them share information, even if they're built using different tools or languages.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -117,42 +117,10 @@ status code
 
 
 
-REST API (Representational State Transfer API)
-
-
-What it is: A REST API is a specific type of API that works over the web using the internet’s language (HTTP).
-Example: It's like ordering food online: you make a request (e.g., a pizza) and get a response (your order delivered).
-How it works: It uses basic commands like:
-GET (to read data, like seeing a menu),
-POST (to send data, like placing an order),
-PUT (to update something, like changing your order),
-DELETE (to remove something, like canceling an order).
-Rules: REST APIs must follow specific rules, like not remembering anything between requests (statelessness).
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Types of API
-
-
-REST APIs:
-
-Use HTTP to access resources and follow specific rules (as we discussed earlier).
-
-
-SOAP APIs:
-
--								
-What it is: A protocol-based API that uses XML for sending data.
-More Complex: SOAP follows strict rules and is often used in enterprise applications (e.g., banking).
-
-
-
-
 
 
 🔷 SOAP (Simple Object Access Protocol)
+
 A strict and formal way of sending data.
 
 Uses XML to send and receive data.
@@ -165,7 +133,10 @@ Slower and heavier because of more rules and data format.
 
 💬 Think of SOAP like sending a registered letter with lots of paperwork and rules.
 
+
+
 🔷 REST (Representational State Transfer)
+
 A flexible and simple way of sending data.
 
 Uses JSON (mostly) or XML.

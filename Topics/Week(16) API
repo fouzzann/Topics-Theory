@@ -62,13 +62,6 @@ Updates only the specified fields of the resource
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Webservice 
-it's a contend of a API,
- Webservice is a way for two different computers or apps to talk to each other over the internet
- It's like a bridge that lets them share information, even if they're built using different tools or languages.
-
--------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Interceptor 
 
 what is interceptors?
@@ -85,6 +78,16 @@ Authentication: Automatically attach tokens or credentials to every request.
 Logging: Log all requests and responses for debugging and analysis.
 Error Handling: Handle errors globally instead of in each individual API call.
 Response Transformation: Convert response data into a desired format before passing it to the rest of your application.
+
+Why do we use Interceptors?
+
+Imagine your healthcare app has 20 API calls. Every API requires an authentication token.
+
+Without an interceptor,
+
+You would need to add the token manually to many requests.
+
+With an interceptor, you can add the token automatically to every request made through the configured Dio instance.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -105,6 +108,10 @@ Validation: The server checks the token to see if it’s valid. If it is, access
 
 status code 
 
+A status code is a number sent by the server to tell us what happened to our API request.
+
+For example, when your Flutter app requests patient details from a server, the server sends back a response with a status code.
+
 1. Informational (100-199)
 
 2. Success (200-299)
@@ -115,7 +122,12 @@ status code
 
 5. Server Error (500-599)
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Webservice 
+it's a contend of a API,
+ Webservice is a way for two different computers or apps to talk to each other over the internet
+ It's like a bridge that lets them share information, even if they're built using different tools or languages.
 
 
 
@@ -150,6 +162,7 @@ Easier to use and understand.
 💬 Think of REST like sending a text message – quick and easy, but still effective.
 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Encoding and Decoding
 --------------------
@@ -232,102 +245,4 @@ print('failed);
 print('response: ${response.body}');
 print('statuscode ${response.statusCode}')
 }
-
-
-
-
-
-
-DSA
-___
-
-Graph
-
-A graph is a way of showing connections between things. It is made up of dots (called nodes or vertices) and lines (called edges) that connect them.
-
-Think of a Graph Like a Map
-Imagine a city map with different places (like homes, schools, and stores) connected by roads. Each place is a node, and each road is an edge.
-
-Types of Graphs
-Undirected Graph – The connections have no direction.
-
-Example: A friendship network. If A is a friend of B, then B is also a friend of A.
-Directed Graph (Digraph) – The connections have direction.
-
-Example: A Twitter following system. If A follows B, B does not have to follow A.
-Weighted Graph – The edges have numbers (weights) that show the strength or cost of the connection.
-
-Example: A road map where each road has a distance.
-Where Are Graphs Used?
-Social Media – Connecting people (friends on Facebook, followers on Instagram).
-Google Maps – Finding the shortest path from one place to another.
-Recommendation Systems – Suggesting friends, products, or movies.
-Network Security – Detecting cyber-attacks.
-
-
-
-types of tree
-____________
-
-
-1. Binary Tree
-
-2. Binary Search Tree (BST)
-
-3. AVL Tree (Self-Balancing BST)
-
-4. Heap Tree
-
-5. Trie (Prefix Tree)
-
-
-AVL tree
-_______
-
-What is an AVL Tree?
-An AVL Tree is a self-balancing Binary Search Tree (BST) where the height difference (balance factor) between the left and right subtrees of any node is at most 1.
-
-This balancing helps in faster searching, inserting, and deleting, making it more efficient than a normal BST.
-
-How It Works?
-Balance Factor Calculation:
-
-Balance Factor (BF) = Height of Left Subtree - Height of Right Subtree
-If BF is -1, 0, or 1, the tree is balanced.
-If BF is less than -1 or greater than 1, the tree is unbalanced. 
-Rotations to Maintain Balance:
-If inserting or deleting a node makes the tree unbalanced, we rotate the tree to restore balance.
-
-There are 4 types of rotations:
-z
-Right Rotation (LL Rotation) – When the left subtree is too tall.
-Left Rotation (RR Rotation) – When the right subtree is too tall.
-Left-Right Rotation (LR Rotation) – When the left child has a taller right subtree.
-Right-Left Rotation (RL Rotation) – When the right child has a taller left subtree.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -195,7 +195,7 @@ App State
 ---------
 
 🔹 What is App State in Flutter (or any app)?
-App State refers to the shared data or global state that affects multiple parts of your app, and often persists across screens and sessions.
+App State is data that different screens in an app need to use.
 
 
 ✅ Examples of App State:
@@ -206,8 +206,6 @@ App theme (light/dark mode)
 Notification settings
 
 Language preference
-
-Shopping cart in an e-commerce app
 
 Authentication token or session
 
@@ -231,9 +229,8 @@ Redux / MobX	Popular but more complex options
  -------
 it determines how a widget looks and behaves at any given time.
 
-State refers to the data or information that a program or application keeps track of at a given time. 
-In the context of software development, especially in Flutter or similar frameworks, 
-state represents the current condition or status of a component or the entire app.
+"State is the current data or value of an app or widget. For example, 
+in a counter app, when the counter changes from 0 to 1, the state changes."
 
 
   Variables

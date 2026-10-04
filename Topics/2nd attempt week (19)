@@ -438,20 +438,3 @@ Disables scrolling completely
 
 
 
-                                                                                 DS weak 1 and 2 
-                                                                                -----------------
-
-
-
-
-
-Linked List Time complexity 
------------------------------
-Access/Search → O(n)
-Insertion at Head → O(1)
-Insertion at Tail → O(1) (if tail pointer exists) / O(n) (if not)
-Deletion at Head → O(1)
-Deletion at Tail → O(n) (Singly Linked List) / O(1) (Doubly Linked List with tail pointer)
-Insertion/Deletion in Middle → O(n)
-
-

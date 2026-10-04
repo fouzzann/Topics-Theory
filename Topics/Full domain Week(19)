@@ -251,7 +251,7 @@ Without main, the program wouldn't know where to begin.
 
 Stateful vs. Stateless Widgets
 
-1.StatelessWidget (Doesn't Change)
+1. StatelessWidget (Doesn't Change)
 What it is: A widget that stays the same once it’s shown. It doesn’t change its look or data.
 When to use: When you don’t need to update anything on the screen. For example, showing static text or an icon.
 
@@ -328,19 +328,6 @@ This creates separate APKs for different CPU architectures and reduces the size 
 
 
 
-
-
-  Hash Table 
---------------
-
-A hash table is like a special list that helps you find things quickly. 
-It stores data in a way that makes searching super fast by using a "key." Think of it like a locker system: 
-you have a key (unique number) that tells you which locker (place in the table) holds your item.
-
-Instead of looking through the whole list, you use the key to jump straight to the right spot! 
-This makes finding or storing data faster compared to regular lists.
-
-
  Flutter Architecture
 ----------------------
 
@@ -365,14 +352,6 @@ Turns Dart code into JavaScript to run in a browser.
 3. Dart VM:(virtual machine)
 Runs Dart code on servers or in the terminal.
 
-Mixin:-
-
-multi inheritance
-
-Isolate:-
-
-multi threading 
-programming, it helps your app or program run more than one task simultaneously, making it faster and more efficient.
 
 
 
@@ -395,54 +374,6 @@ Example:
 
   
 -----------------------------------------------------------------------------------------
-How to use in Mac for a ios developments 
-________________________________________
-
-1. Get a Mac
-
-2. Install Required Tools
-✅ Install Xcode (For iOS Development)
-
-
-1. Xcode (Most Important)
-
-Xcode is the IDE used for iOS development.
-
-2. CocoaPods
-
-Used to manage iOS dependencies.
-
-3. Simulator
-
-iOS Emulator inside Xcode.
-
-
-Animation in flutter 
------------------
-
-Using Built-in Animated Widgets (For Simple Animations)
-
-Using TweenAnimationBuilder (For Custom Tweens)
-
-Using Hero (For Page Transitions)
-
-Using Lottie for Pre-Made Animations
-
-
-
-
-Layouts in flutter
-------------------
-
-Widget	Purpose
-Container Box with padding, margins, and styling
-Center	Centers child widget
-Padding	Adds space inside a widget
-Column	Vertical arrangement
-Row	Horizontal arrangement
-Stack	Overlapping widgets
-ListView	Scrollable list
-GridView	Grid-based layout
 
 
 

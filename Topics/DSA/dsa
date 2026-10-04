@@ -86,3 +86,14 @@ Deletion at Tail → O(n) (Singly Linked List) / O(1) (Doubly Linked List with t
 Insertion/Deletion in Middle → O(n)
 
 
+
+
+  Hash Table 
+--------------
+
+A hash table is like a special list that helps you find things quickly. 
+It stores data in a way that makes searching super fast by using a "key." Think of it like a locker system: 
+you have a key (unique number) that tells you which locker (place in the table) holds your item.
+
+Instead of looking through the whole list, you use the key to jump straight to the right spot! 
+This makes finding or storing data faster compared to regular lists.

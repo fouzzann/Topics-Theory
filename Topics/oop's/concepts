@@ -1,4 +1,36 @@
 
+What is OOP? (Object-Oriented Programming)
+OOP (Object-Oriented Programming) is a way of writing code where we use objects.
+An object is like a real-world thing (e.g., a car, doctor, or patient). It has:
+✔ Properties (like name, color, or age).
+✔ Actions (like driving, speaking, or treating patients).
+To implement real-world concepts in coding
+OOP makes code organized, reusable, and easy to manage.
+
+
+
+
+
+Encapsulation
+-------------
+
+What is Encapsulation?
+Encapsulation means keeping the internal details of a class hidden and allowing access only through methods. We make variables private (_variableName) and provide getter and setter methods.
+
+
+1. Class and Object
+Real-life example: Think of a blueprint of a house as a class. It has details like the number of rooms, type of windows, etc.
+Object: When you actually build a house from that blueprint, it becomes an object. You can build multiple houses (objects) from the same blueprint (class), each with its own specific details.
+2. Encapsulation
+Real-life example: A TV remote hides its inner wiring and circuitry from us. All we see are the buttons on the surface, and we know what each button does without needing to know how the remote is built inside.
+In OOP: Encapsulation keeps the complex parts hidden and only shows what’s needed to use it.
+3. Inheritance
+Real-life example: A child inherits traits from their parents, like eye color or height. The child doesn’t need to recreate these traits—they get them automatically.
+In OOP: A new class can inherit properties and behaviors from an existing class, like a “Bird” class can inherit from an “Animal” class and get traits like “breathing” or “moving.”
+4.Polymorphism
+Real-life example: A smartphone has a “volume up” button. When you press it, 
+it can raise the volume for calls, music, or video, depending on what’s open. 
+The same button (action) does different things based on the context.
 Mixin:-
 
 multi inheritance

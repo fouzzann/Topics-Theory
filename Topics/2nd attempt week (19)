@@ -62,6 +62,20 @@ __________________________________
 2.Strong Support for Asynchronous Programming: 
 
 
+what is flutter 
+-------------
+Flutter is an open-source UI framework created by Google for building natively compiled applications 
+for mobile (Android & iOS), web, and desktop from a single codebase. It uses Dart as its programming language.
+
+
+what is dart ?
+--------------
+
+Dart is a programming language developed by Google. Flutter uses Dart to build mobile, web, 
+and desktop apps. Dart supports OOP, null safety, and async programming. 
+It uses JIT during development and AOT for release builds.
+
+
   JIT/AOT
 ____________ 
 
@@ -86,24 +100,6 @@ Advantage:
  - Better Performance: It runs faster and smoother.
 Disadvantage:
  - Longer Build Time: It takes more time to prepare the app for release.
-
-
-
-  
-
-1. Class and Object
-Real-life example: Think of a blueprint of a house as a class. It has details like the number of rooms, type of windows, etc.
-Object: When you actually build a house from that blueprint, it becomes an object. You can build multiple houses (objects) from the same blueprint (class), each with its own specific details.
-2. Encapsulation
-Real-life example: A TV remote hides its inner wiring and circuitry from us. All we see are the buttons on the surface, and we know what each button does without needing to know how the remote is built inside.
-In OOP: Encapsulation keeps the complex parts hidden and only shows what’s needed to use it.
-3. Inheritance
-Real-life example: A child inherits traits from their parents, like eye color or height. The child doesn’t need to recreate these traits—they get them automatically.
-In OOP: A new class can inherit properties and behaviors from an existing class, like a “Bird” class can inherit from an “Animal” class and get traits like “breathing” or “moving.”
-4.Polymorphism
-Real-life example: A smartphone has a “volume up” button. When you press it, 
-it can raise the volume for calls, music, or video, depending on what’s open. 
-The same button (action) does different things based on the context.
 
 
 

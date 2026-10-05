@@ -358,20 +358,23 @@ Runs Dart code on servers or in the terminal.
 
 Final and Const:-
 
+Both final and const mean:
+Once you give the variable a value, you cannot change that value later.
+
 const:
-Use const when the value is known at compile time for better performance.
-A variable defined with const is also immutable (cannot change), 
-but the value must be known at compile-time (before the program runs).
-It is used when the value is constant and known before running the program.
+1. Use const when the value is already known
+
+Use const when the value is fixed and known before the app runs.
 
 
 
 final:
-Use final when the value is known at runtime but should not change.
-A variable defined with final can only be set once. After it gets a value, you can't change it.
-It is used when the value is known at runtime (while the program is running).
-Example:
+2. Use final when the value is decided later
 
+Use final when you don't want the value to change, but you only know the value when the app is running.
+For example, getting the current time:
+
+final currentTime = DateTime.now();
   
 -----------------------------------------------------------------------------------------
 

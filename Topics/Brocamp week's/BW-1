@@ -170,11 +170,6 @@ final and const (for immutable variables)
 
 
 
-Constructors
------------
-
-A constructor is a special function in programming that is automatically called when an object of a class is created. It is used to initialize the object’s properties.
-
 
 parse - tryparse
 ----------------
@@ -224,6 +219,9 @@ OOP makes code organized, reusable, and easy to manage.
 
 Encapsulation
 -------------
+With Encapsulation
+
+We can make the data private:
 
 What is Encapsulation?
 Encapsulation means keeping the internal details of a class hidden and allowing access only through methods. We make variables private (_variableName) and provide getter and setter methods.

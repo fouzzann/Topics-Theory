@@ -176,10 +176,10 @@ runApp() is the entry point of a Flutter application. It initializes the widget 
 🔍 What’s Happening in Kotlin Code?
 Part	Explanation
 CHANNEL = "com.example.battery"	                 Must match the channel in Dart
-MethodChannel(...).setMethodCallHandler {}	 Listens for Dart calls
-call.method == "getBatteryLevel"	         Checks if Dart asked for battery
-getBatteryLevel()	                         Gets battery from Android's BatteryManager
-result.success(...)	                         Sends result back to Dart
+MethodChannel(...).setMethodCallHandler {}	     Listens for Dart calls
+call.method == "getBatteryLevel"	               Checks if Dart asked for battery
+getBatteryLevel()	                               Gets battery from Android's BatteryManager
+result.success(...)	                             Sends result back to Dart
 
 
 
@@ -255,41 +255,6 @@ eg youtube while scrolling from the home interface its loading only the time of 
 
 
 
-Graph - Simple Explanation
-
-A graph is a way to show how things are connected.
-
-Parts of a Graph:
-
-Nodes (Vertices) - The points in a graph.
-
-Edges (Links) - The lines that connect the nodes.
-
-Types of Graphs:
-
-Directed Graph - The connection has a direction (A → B). 
-
-Undirected Graph - The connection has no direction (A − B).
-
-Weighted Graph - The connections have a number (cost or distance).
-
-Unweighted Graph - The connections have no number.
-
-Cyclic Graph - A path forms a loop.
-
-Acyclic Graph - No loops in the path.
-
-Where Graphs Are Used:
-
-Social media (friends on Facebook, followers on Instagram)
-
-Google Maps (finding the shortest route)
-
-Websites (links between web pages)
-
-Computer networks (connecting devices)
-
-Graphs help in solving many real-life problems. They are used in technology, science, and daily life.
 
 
 

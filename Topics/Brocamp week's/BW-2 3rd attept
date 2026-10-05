@@ -39,7 +39,8 @@ It's a lightweight way to manage state in your app.
 Simple state management 
 -----------------------
 
-Simple state management in Flutter refers to basic and easy ways to manage and update the state (data) of your app — like UI changes, user inputs, or internal values — without using complex tools or heavy frameworks.
+Simple state management in Flutter it's  simple and easy way to manage and update the state (data) of your app —
+ like UI changes, user inputs, or internal values — without using complex tools or heavy frameworks.
 
 
 
@@ -167,7 +168,7 @@ Why use FlutterSecureStorage?
 
 
 
-It stores sensitive information (like tokens, passwords, keys) encrypted.
+It stores sensitive information (authentication tokens, passwords, API keys,) encrypted.
 
 Uses platform-specific secure storage:
 
@@ -179,7 +180,6 @@ Web: Web crypto APIs (where supported)
 
 FlutterSecureStorage encrypts data so it’s safer.
 
-Great for storing authentication tokens, passwords, API keys, user secrets.
 
 
 

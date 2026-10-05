@@ -1,0 +1,15 @@
+SQL vs NoSQL
+
+SQL (Relational Database)
+
+Stores data in tables.
+Tables can be connected to each other.
+Data has a fixed structure.
+Example: MySQL, SQLite, PostgreSQL
+
+NoSQL (Non-Relational Database)
+
+Does not mainly use tables.
+Stores data like documents or key-value pairs.
+Data structure is more flexible.
+Example: MongoDB, Firebase Firestore

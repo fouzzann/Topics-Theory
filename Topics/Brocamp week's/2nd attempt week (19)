@@ -81,7 +81,7 @@ ____________
 
 JIT (Just-In-Time)
 
- - What it is: JIT compiles Dart code into machine code while the program is running.
+ - What it is: JIT compiles Dart code into machine code during runtime.
  - When it happens: Just before the code needs to run.
 Advantage:
  - Quick Changes: we can change our code and see results immediately.
@@ -94,7 +94,7 @@ Disadvantage:
 AOT (Ahead-Of-Time)
 
  - : AOT compiles Dart code into machine code before we run the program.
- - When it happens: While you're building the app.
+ - When it happens: While we're building the app.
 Advantage:
  - Fast Start: the app opens quickly because it’s already ready to go.
  - Better Performance: It runs faster and smoother.
@@ -113,45 +113,37 @@ Why Use It?
 Keeps Options Together: Like a menu of choices (like days or colors).
 Easy to Understand: Instead of random numbers or words, you get named choices that are clear.
 
+eg:-Simple example
 
+Suppose an order can have only 3 statuses:
+
+enum OrderStatus {
+  pending,
+  success,
+  failed,
+}
+
+
+What is a constructor?
+----------------------
+
+“A constructor is a special method in a class. It is called automatically when we create an object. We use it to set the initial values.”
 
 Types of Constructors
 _____________________
 
 
-
 1. Default Constructor
-What it is: A constructor that Dart creates for you automatically if you don’t write any constructor yourself.
-Why it’s useful: It lets you create an object without needing any extra information.
 
+“It is a normal constructor. It is used to create an object.”
 
+2. Named Constructor
 
-2. Parameterized Constructor
-What it is: A constructor that takes parameters (extra values) to set up the object with specific values.
-Why it’s useful: It lets you set values at the time of creating the object.
+“It is a constructor with a name. We use it when we want to create an object in different ways.”
 
+3. Factory Constructor
 
-
-3. Named Constructor
-What it is: A constructor with a specific name.
-Why it’s useful: It allows creating the object in multiple ways.
-
-
-4. Redirecting Constructor
-What it is: A constructor that calls another constructor in the same class.
-Why it’s useful: It helps avoid repeating code by reusing another constructor.
-
-
-
-5. Constant Constructor
-What it is: A constructor that creates constant objects that can’t be changed.
-Why it’s useful: Helps create objects that are fixed and don’t change (like configuration settings).
-
-
-6. Factory Constructor
 What it is: A special constructor that can create objects conditionally. It might return a new object or an existing one.
-Why it’s useful: Ideal for creating a single instance (Singleton) or when you want custom logic before creating the object.
-
 
 
  Try parse
@@ -172,34 +164,96 @@ ___________
 // }
 
 
- Finally
-_________
 
 
- - In Dart, finally is used with try-catch to run some code no matter what happens, whether there's an error or not. It’s often used for cleanup tasks.
-purpose: It is part of error handling.
-Function: It lets you run code that always happens, whether an error occurs or not.
 
- - finally -  code that always run 
+1. try-catch
+-------------
 
- - try block: You try to do something (like dividing numbers).
+What is it?
 
- - If it works, great! If it doesn’t (like dividing by zero), it goes to the catch block.
- - catch block: If there was an error, it catches it and shows an error message.
+try-catch is used to handle errors so the app doesn't crash.
 
- - finally block: This runs after the try and catch.
+try → code that might cause an error
+catch → what to do if an error happens
+
+try {
+  int result = 10 ~/ 0;
+  print(result);
+} catch (e) {
+  print("Something went wrong");
+}
+
+Here, 10 ~/ 0 causes an error, so catch handles it.
+
+Where do we use it?
+
+Commonly when:
+
+Calling an API
+Parsing JSON
 
 
- Future.then
-_____________
+2. finally
+-----------
+What is it?
+
+finally is used for code that must run whether there is an error or not.
+
+try {
+  print("Calling API...");
+} catch (e) {
+  print("Error occurred");
+} finally {
+  print("Finished");
+}
+
+Even if there is an error, finally will run.
+
+Where do we use it?
+
+For example, when you want to:
+
+Stop a loading indicator
+Close a connection
+Clean up something
 
 
- - In Dart, Future.then is used to handle the result of an asynchronous operation.
-   A Future represents a value that will be available at some point in the future, 
-   and then allows you to specify what to do when that value is ready.
+3. Future.then()
+----------------
 
-Example: Think of it like ordering food; you wait for the food to arrive, and then you eat when it gets there.
-Eg:- message notifications
+
+What is Future?
+
+A Future means:
+
+“I will give you a result later.”
+
+For example, an API call takes some time.
+
+Future<String> getUser() async {
+  return "Fouzan";
+}
+
+You can use .then() to say:
+
+“When the Future finishes, do this.”
+
+getUser().then((name) {
+  print(name);
+});
+
+So when getUser() finishes, .then() runs.
+
+Where do we use .then()?
+
+Mostly for asynchronous operations such as:
+
+API calls
+Firebase operations
+Database operations
+
+
 
 
 What is an Embedder
@@ -326,6 +380,7 @@ ______________
 
 
 
+
 SQL queries
 ___________
 
@@ -338,7 +393,7 @@ WHERE: Add conditions in where and whereArgs like search case filter.
 INSERT: Use db.insert to add new data.
 UPDATE: Use db.update to modify existing data.
 DELETE: Use db.delete to remove data.
-
+ALTER :Used to change the structure of an existing table.
 
 Types of web services
 ______________________
@@ -351,23 +406,7 @@ WebSocket: Real-time, for instant data flow.
 
 
 
-Recursion
-_________
 
-Recursion is a programming concept where a function calls itself to solve a problem. 
-Instead of using loops (like for or while), recursion breaks the problem down into smaller, manageable pieces.
-
-
-
-Disadvantages of recursion
-____________________________
-
-
-1. Uses More Memory: Can lead to stack overflow.
-2. Can Be Slower: Extra time from multiple function calls.
-3. Hard to Debug: Tricky to trace errors.
-4. Limited Depth: Maximum call limit can cause crashes.
-5. Risk of Infinite Recursion: Incorrect base case may lead to endless calls.
 
 
 initState

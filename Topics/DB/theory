@@ -204,4 +204,24 @@ Database versioning is used to track changes in the database structure.
 When we change the database, like adding a new column or table, 
 we increase the database version and use migration or onUpgrade to update the existing database without losing user data.
 
+ ALTER = Change the structure
+-----------------------------
+ALTER is used when you want to change the table itself.
 
+For example, adding a new column:
+
+ALTER TABLE users
+ADD COLUMN age INT;
+
+Now the table structure changes:
+
+Before:
+users
+ ├── id
+ └── name
+
+After:
+users
+ ├── id
+ ├── name
+ └── age

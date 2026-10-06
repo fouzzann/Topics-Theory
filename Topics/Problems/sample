@@ -1,0 +1,14 @@
+Add a column in an existing table 
+
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+
+-- 2. Add a new column later
+ALTER TABLE users
+ADD phone VARCHAR(15);
+
+
+

@@ -1,18 +1,20 @@
+
+
+
 SQL vs NoSQL
+------------
 
-SQL (Relational Database)
+Tables	                         Documents / collections / other structures
+Rows and columns	             Flexible structure
+Fixed schema	                 flexible schema
+Uses SQL queries	  
+Good for relationships	         Good for flexible/scalable data
+eg :- SQLite, MySQL	             eg :- Hive,Firestore, MongoDB
 
-Stores data in tables.
-Tables can be connected to each other.
-Data has a fixed structure.
-Example: MySQL, SQLite, PostgreSQL
-
-NoSQL (Non-Relational Database)
-
-Does not mainly use tables.
-Stores data like documents or key-value pairs.
-Data structure is more flexible.
-Example: MongoDB, Firebase Firestore
+what is schema 
+--------------
+A schema is basically the structure or blueprint of a database.
+Schema tells us how the data should be organized. Data is the actual information stored inside that structure.
 
 
 Hive Adapter 
@@ -24,7 +26,7 @@ eg:-
 String
 int
 bool
-double
+double  
 
 But if you have a custom model/class
 
@@ -177,7 +179,7 @@ So user_id = 1 means:
 This order belongs to the user whose id = 1 (Fouzan).
 
 CREATE TABLE users (
-    
+
   id INTEGER PRIMARY KEY,
   name TEXT
 );
@@ -188,5 +190,18 @@ CREATE TABLE orders (
   product TEXT,
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+From key 
+--------
+
+"FormKey is a GlobalKey<FormState> used to access and control a Form, mainly for validation and saving form data."
+
+
+Versioning in DB
+----------------
+Database versioning is used to track changes in the database structure. 
+When we change the database, like adding a new column or table, 
+we increase the database version and use migration or onUpgrade to update the existing database without losing user data.
 
 

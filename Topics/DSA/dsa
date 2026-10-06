@@ -101,6 +101,7 @@ This makes finding or storing data faster compared to regular lists.
 
 
 Graph - Simple Explanation
+--------------------------
 
 A graph is a way to show how things are connected.
 
@@ -155,3 +156,39 @@ ____________________________
 3. Hard to Debug: Tricky to trace errors.
 4. Limited Depth: Maximum call limit can cause crashes.
 5. Risk of Infinite Recursion: Incorrect base case may lead to endless calls.
+
+
+Big O Notation 
+--------------
+
+Why do we use Big O?
+
+The main role of Big O is to compare algorithms and understand which one will perform better for large amounts of data.
+
+what is memmory leak
+---------------------
+"A memory leak happens when an app keeps resources in memory even after they are no longer needed, causing memory usage to increase over time."
+
+So what does GC do?
+--------------------
+Garbage Collector automatically finds objects that are no longer reachable/needed and frees their memory.
+
+
+1. Queue — FIFO
+----------------
+Main operations
+enqueue → add an item to the back
+dequeue → remove an item from the front
+peek/front → see the first item
+
+
+2. Stack — LIFO
+---------------
+Main operations
+push → add an item
+pop → remove the top item
+peek/top → see the top item without removing it
+
+
+
+

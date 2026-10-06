@@ -378,6 +378,30 @@ ______________
    we can ask Android or iOS to do it through the Method Channel and then send the result back to Flutter.
 
 
+eg :- Android/iOS device features
+Battery information
+Bluetooth
+Native SDKs
+Fingerprint/biometric features
+Native payment SDKs
+
+
+
+   How its works
+--------------------
+   Flutter
+   ↓
+"getBatteryLevel"
+   ↓
+Method Channel
+   ↓
+Android
+   ↓
+Battery level
+   ↓
+Method Channel
+   ↓
+Flutter
 
 
 

@@ -159,6 +159,32 @@ ______________
 
 
 
+eg :- 
+
+Android/iOS device features
+Battery information
+Bluetooth
+Fingerprint
+
+
+   How its works
+--------------------
+   Flutter
+   ↓
+"getBatteryLevel"
+   ↓
+Method Channel
+   ↓
+Android
+   ↓
+Battery level
+   ↓
+Method Channel
+   ↓
+Flutter
+
+
+
 Main in flutter 
 --------------
 main() is the starting point of every Dart program, including Flutter apps. It is the function that gets executed first when the app starts.

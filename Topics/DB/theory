@@ -13,3 +13,180 @@ Does not mainly use tables.
 Stores data like documents or key-value pairs.
 Data structure is more flexible.
 Example: MongoDB, Firebase Firestore
+
+
+Hive Adapter 
+------------
+what is it ?:-Think of Hive Adapter as a translator.
+
+Hive can easily store simple data:
+eg:-
+String
+int
+bool
+double
+
+But if you have a custom model/class
+
+Hive doesn't know how to store this User object.
+
+So we use a Hive Adapter.
+
+👉 Hive Adapter tells Hive how to save and read our custom object.
+
+"Hive Adapter is used to store and retrieve custom objects in Hive. It tells Hive how to convert our model object into data and get it back as an object."
+
+Just remember:
+👉 Hive Adapter = Translator between our model and Hive.
+
+
+What is a Box?
+--------------
+
+A Box is like a storage container in Hive.
+
+You open a Box and use it to save, get, update, and delete data.
+
+Encrypted box
+------------- 
+Encrypted box in Hive, it is simply a Box whose stored data is protected with encryption.
+
+Here, Hive encrypts the data before storing it.
+
+Think of it like:
+
+Normal Box:
+Your data → Storage
+
+Encrypted Box:
+Your data → 🔒 Encryption → Storage
+
+
+Why use it?
+
+For sensitive data, such as:
+
+Login tokens
+User credentials
+Private information
+Security-related data
+
+
+Unique Constraint
+-----------------
+Unique → the value/data should not be duplicated.
+
+Unique constraint in a database like SQLite/SQFlite, it is very simple:
+
+A unique constraint means:
+
+The same value cannot be stored twice in that column.
+
+Example
+
+Suppose you have a users table:
+
+id | email
+---|----------------
+1  | fouzan@gmail.com
+2  | ali@gmail.com
+
+If email has a UNIQUE constraint, you cannot add:
+
+3 | fouzan@gmail.com ❌
+
+Because that email already exists.
+
+Why do we use it?
+
+To prevent duplicate data.
+
+Common examples:
+
+Email → should be unique
+Username → should be unique
+Phone number → sometimes unique
+Employee ID → should be unique
+
+
+
+Primary Key
+-----------
+
+
+A Primary Key is a column that uniquely identifies each row in a database table.
+
+Simple example
+
+Imagine a users table:
+
+id	name	email
+1	Fouzan	fouzan@gmail.com
+2	Ali	ali@gmail.com
+3	Ahmed	ahmed@gmail.com
+
+Here, id is the Primary Key.
+
+Why?
+
+Because every user has a different ID.
+
+1 → Fouzan
+2 → Ali
+3 → Ahmed
+
+You cannot have:
+
+id = 1
+id = 1  ❌
+
+
+
+
+what is forien key 
+----------------
+
+A foreign key is a column used to create a relationship between two tables. It refers to the primary key of another table."
+
+Very simple example
+
+Suppose we have two tables:
+
+Users table
+
+id (Primary Key)	name
+1	Fouzan
+2	Rahul
+
+Orders table
+
+order_id (Primary Key)	user_id (Foreign Key)	product
+101	1	Phone
+102	2	Laptop
+103	1	Mouse
+
+Here:
+
+Users.id → Primary Key
+Orders.order_id → Primary Key
+Orders.user_id → Foreign Key
+Orders.user_id refers to Users.id
+
+So user_id = 1 means:
+
+This order belongs to the user whose id = 1 (Fouzan).
+
+CREATE TABLE users (
+    
+  id INTEGER PRIMARY KEY,
+  name TEXT
+);
+
+CREATE TABLE orders (
+  id INTEGER PRIMARY KEY,
+  user_id INTEGER,
+  product TEXT,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+

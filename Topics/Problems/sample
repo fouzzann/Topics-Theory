@@ -10,5 +10,45 @@ CREATE TABLE users (
 ALTER TABLE users
 ADD phone VARCHAR(15);
 
+-------------------------------------------------------------------------------------------------
+Write sql query using foreign KEY
+
+CREATE TABLE users(
+    user_id INT PRIMARY KEY,
+    name VARCHAR(100)
+);
+
+CREATE TABLE orders(
+    orders_id INT PRIMARY KEY,
+    user_id INT,
+    FORIEGN KEY (user_id) REFERENCE users (user_id)
+)
+
+INSERT INTO users (id, name)
+VALUES (1, 'Fouzan');
+
+
+ How to merge 2 tables?
+ ------------------------------------------------------------------------------------------------
+
+SELECT users.name , orders.product
+FROM users
+INNER JOIN orders
+ON user_id = orders.user_id;
+
+Method channel 
+---------------
+platform is simply a MethodChannel object.
+
+Its job is to provide the communication channel between Flutter and native code.
+
+
+invokeMethod() is a function of the MethodChannel.
+
+Its job is to send a request through that channel to native code.
+
+MethodChannel('battery_channel')
+
+platform.invokeMethod('getBatteryLevel');
 
 

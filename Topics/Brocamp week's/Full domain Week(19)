@@ -24,7 +24,18 @@ practice more string operations
                                                                                            Full domain Week(19)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+what is flutter 
+-------------
+Flutter is an open-source UI framework created by Google for building natively compiled applications 
+for mobile (Android & iOS), web, and desktop from a single codebase. It uses Dart as its programming language.
 
+
+what is dart ?
+--------------
+
+Dart is a programming language developed by Google. Flutter uses Dart to build mobile, web, 
+and desktop apps. Dart supports OOP, null safety, and async programming. 
+It uses JIT during development and AOT for release builds.
 
 Flutter Advantages
 

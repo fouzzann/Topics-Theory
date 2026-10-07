@@ -11,6 +11,7 @@ Uses SQL queries
 Good for relationships	         Good for flexible/scalable data
 eg :- SQLite, MySQL	             eg :- Hive,Firestore, MongoDB
 
+
 what is schema 
 --------------
 A schema is basically the structure or blueprint of a database.

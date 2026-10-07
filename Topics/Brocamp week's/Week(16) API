@@ -66,6 +66,7 @@ Interceptor
 
 what is interceptors?
 
+
 Interceptors act as middlemen in the communication process between your application and a server. They allow you to:
 
 Modify Requests: Add headers, transform data, or log information before the request is sent.

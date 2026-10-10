@@ -1,40 +1,40 @@
-Add a column in an existing table 
+-- Add a column in an existing table 
 
-CREATE TABLE users (
-    id INT PRIMARY KEY,
-    name VARCHAR(50),
-    age INT
-);
+-- CREATE TABLE users (
+--     id INT PRIMARY KEY,
+--     name VARCHAR(50),
+--     age INT
+-- );
 
--- 2. Add a new column later
-ALTER TABLE users
-ADD phone VARCHAR(15);
+-- -- 2. Add a new column later
+-- ALTER TABLE users
+-- ADD phone VARCHAR(15);
 
--------------------------------------------------------------------------------------------------
-Write sql query using foreign KEY
+-- -------------------------------------------------------------------------------------------------
+-- Write sql query using foreign KEY
 
-CREATE TABLE users(
-    user_id INT PRIMARY KEY,
-    name VARCHAR(100)
-);
+-- CREATE TABLE users(
+--     user_id INT PRIMARY KEY,
+--     name VARCHAR(100)
+-- );
 
-CREATE TABLE orders(
-    orders_id INT PRIMARY KEY,
-    user_id INT,
-    FORIEGN KEY (user_id) REFERENCE users (user_id)
-)
+-- CREATE TABLE orders(
+--     orders_id INT PRIMARY KEY,
+--     user_id INT,
+--     FORIEGN KEY (user_id) REFERENCE users (user_id)
+-- )
 
-INSERT INTO users (id, name)
-VALUES (1, 'Fouzan');
+-- INSERT INTO users (id, name)
+-- VALUES (1, 'Fouzan');
 
 
- How to merge 2 tables?
- ------------------------------------------------------------------------------------------------
+--  How to merge 2 tables?
+--  ------------------------------------------------------------------------------------------------
 
-SELECT users.name , orders.product
-FROM users
-INNER JOIN orders
-ON user_id = orders.user_id;
+-- SELECT users.name , orders.product
+-- FROM users
+-- INNER JOIN orders
+-- ON user_id = orders.user_id;
 
 Method channel 
 ---------------
@@ -52,3 +52,6 @@ MethodChannel('battery_channel')
 platform.invokeMethod('getBatteryLevel');
 
 
+
+
+ 

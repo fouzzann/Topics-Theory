@@ -1,0 +1,67 @@
+1. How does signup work?
+----------------------------
+1. The user enters their name, email, password, and other details.
+2. When they click Signup, Firebase creates their account.
+3. We save the user's other details in our database.
+4. Firebase sends a verification link to their email.
+5. The user clicks the link, and our app opens.
+6. Our app gets the oobCode from the link and sends it to Firebase.
+7. Firebase checks the code and verifies the email.
+8. Now the user can log in, and our app allows them to access protected features.
+
+
+
+2. What is oobCode?
+------------------------
+oobCode is a temporary code used to verify the user's email.
+When the user clicks the verification link, the app gets this code and sends it to Firebase. 
+Firebase checks the code and verifies the email.
+Remember: oobCode is not an access token or a refresh token.
+
+
+
+3. What is an access token?
+----------------------------
+An access token is like a temporary key.
+When the user logs in, Firebase gives us an ID token. We send this token to our backend when accessing protected APIs.
+For example, when fetching a user's profile, the token helps the backend check who the user is.
+
+
+
+4. What is a refresh token?
+-----------------------------
+An access token expires after some time. When it expires, we need a new one.
+A refresh token helps Firebase get a new ID token without asking the user to log in again.
+The good thing is that Firebase normally handles this automatically. 
+We don't usually need to implement the refresh process manually.
+
+
+how to get refresh token 
+------------------------
+In Flutter, you can get the token from Firebase using getIdToken(). Firebase calls it an ID token,
+ and you can use it as an access token when communicating with your backend.
+
+
+
+
+payment 
+-------
+
+
+Create payment order api in that user id, amount, plan name, currency need to be pass
+
+Once those data came to backend thier I will trigger the razorpay api then it will create payment order
+
+Once payment is done then through the web socket backend to frontend I will send the payment confirmation 
+
+then frontend side will trigger the success or failure page
+
+
+
+LOGIN 
+-----
+ When signing up, the user fills in all required details and clicks the Signup button. The request is first sent to Firebase, 
+ which creates a new user account. Once the Firebase user is created, the user details are also stored in our database. 
+ A verification link is then sent to the email provided by the user. When the user clicks on the link, 
+ it redirects to our application, where the frontend extracts the oob code and validates it with Firebase. 
+ If the verification is successful, the user can then log in properly.

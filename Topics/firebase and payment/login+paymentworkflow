@@ -41,18 +41,20 @@ how to get refresh token
 In Flutter, you can get the token from Firebase using getIdToken(). Firebase calls it an ID token,
  and you can use it as an access token when communicating with your backend.
 
-
-
+for shorts in yt from URL to the our app
+youtube_player_iframe
 
 payment 
 -------
-
+. Since the project was Flutter Web, 
+I integrated Razorpay Checkout using its JavaScript SDK through 
+JavaScript interop instead of relying on the native Flutter Razorpay SDK.”
 
 Create payment order api in that user id, amount, plan name, currency need to be pass
 
-Once those data came to backend thier I will trigger the razorpay api then it will create payment order
+Once those data came to backend thier he will trigger the razorpay api then it will create payment order
 
-Once payment is done then through the web socket backend to frontend I will send the payment confirmation 
+Once payment is done then through the web socket backend to frontend he will send the payment confirmation 
 
 then frontend side will trigger the success or failure page
 

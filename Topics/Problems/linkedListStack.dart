@@ -1,5 +1,5 @@
 class Node {
-  var data;
+  int data;
   Node? next;
   Node(this.data);
 }
@@ -13,9 +13,9 @@ class Stack {
   }
 
   void pop() {
-    if (top != null) {
+   
       top = top!.next;
-    }
+    
   }
 
   dis() {

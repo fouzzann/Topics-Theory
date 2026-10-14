@@ -69,6 +69,21 @@ LOGIN
  If the verification is successful, the user can then log in properly.
 
 
+ElevatedButton(
+  onPressed: () async {
+    await FirebaseAuth.instance
+        .createUserWithEmailAndPassword(
+      email: emailController.text.trim(),
+      password: passwordController.text,
+    );
+
+    print("Account created");
+  },
+  child: const Text("Signup"),
+)
+
+
+
  how to uplaod the file into the server
  --------------------------------------
 

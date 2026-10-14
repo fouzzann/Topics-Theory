@@ -67,3 +67,38 @@ LOGIN
  A verification link is then sent to the email provided by the user. When the user clicks on the link, 
  it redirects to our application, where the frontend extracts the oob code and validates it with Firebase. 
  If the verification is successful, the user can then log in properly.
+
+
+ how to uplaod the file into the server
+ --------------------------------------
+
+ FilePicker → MultipartFile → FormData → Dio POST → Backend
+
+ 1. What is the role of MultipartFile?
+Suppose the user selects resume.pdf.
+final multipartFile = await MultipartFile.fromFile(
+  file.path!,
+  filename: file.name,
+);
+
+
+The role of MultipartFile is to represent the file as a part of a multipart HTTP request.
+It contains information needed to send the file, such as its filename and file content.
+Think of it like preparing your resume to be sent in a courier package.
+2. What is the role of FormData?
+Now suppose you want to send the resume along with the user's name.
+final formData = FormData.fromMap({
+  'file': multipartFile,
+  'name': 'Fouzan',
+});
+
+
+The role of FormData is to combine the file and other form fields into one multipart request body.
+Think of it like putting your resume and your name on the courier form together.
+
+file upload Request
+--------------------- 
+final response = await Dio().post(
+  'https://your-server.com/upload',
+  data: formData,
+);
